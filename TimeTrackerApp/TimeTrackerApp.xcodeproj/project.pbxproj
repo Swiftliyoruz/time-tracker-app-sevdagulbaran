@@ -29,8 +29,6 @@
 		52AF0BEE28C672CD00C14DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AF0BEC28C672CD00C14DB3 /* LaunchScreen.storyboard */; };
 		52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */; };
 		52B4169D28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */; };
-		52D3719928D12E8B00973813 /* FloatingTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 52D3719828D12E8B00973813 /* FloatingTabBarController */; };
-		52D3719D28D1428400973813 /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3719C28D1428400973813 /* CustomTabbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +56,6 @@
 		52AF0BEF28C672CD00C14DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTaskCollectionViewCell.xib; sourceTree = "<group>"; };
-		52D3719C28D1428400973813 /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D3719928D12E8B00973813 /* FloatingTabBarController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +72,6 @@
 		5249702128D118260060BACB /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				52D3719C28D1428400973813 /* CustomTabbarViewController.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -249,7 +244,6 @@
 			);
 			name = TimeTrackerApp;
 			packageProductDependencies = (
-				52D3719828D12E8B00973813 /* FloatingTabBarController */,
 			);
 			productName = TimeTrackerApp;
 			productReference = 52AF0BDE28C672C700C14DB3 /* TimeTrackerApp.app */;
@@ -280,7 +274,6 @@
 			);
 			mainGroup = 52AF0BD528C672C700C14DB3;
 			packageReferences = (
-				52D3719728D12E8B00973813 /* XCRemoteSwiftPackageReference "FloatingTabBarController" */,
 			);
 			productRefGroup = 52AF0BDF28C672C700C14DB3 /* Products */;
 			projectDirPath = "";
@@ -326,7 +319,6 @@
 				52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */,
 				52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */,
 				5249702A28D119340060BACB /* ReportViewController.swift in Sources */,
-				52D3719D28D1428400973813 /* CustomTabbarViewController.swift in Sources */,
 				52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */,
 				5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */,
 			);
@@ -546,25 +538,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		52D3719728D12E8B00973813 /* XCRemoteSwiftPackageReference "FloatingTabBarController" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/EmilioPelaez/FloatingTabBarController";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		52D3719828D12E8B00973813 /* FloatingTabBarController */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52D3719728D12E8B00973813 /* XCRemoteSwiftPackageReference "FloatingTabBarController" */;
-			productName = FloatingTabBarController;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52AF0BD628C672C700C14DB3 /* Project object */;
 }
