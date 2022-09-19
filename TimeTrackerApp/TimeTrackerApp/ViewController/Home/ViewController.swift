@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     func tabbarConfig(){
-        guard let tabbar = self.tabBarController?.tabBar else{return}
+        guard let tabbar = self.tabBarController?.tabBar else { return }
         
         tabbar.tintColor = .blackBackground
         tabbar.unselectedItemTintColor = .lightBackground

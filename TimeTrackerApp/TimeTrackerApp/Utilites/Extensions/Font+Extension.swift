@@ -5,11 +5,10 @@
 //  Created by Sevda Gul Baran on 13.09.2022.
 //
 
-import Foundation
 import UIKit
 
 
-extension UIFont{
+extension UIFont {
     
     static func appFont(size: CGFloat, type:String) -> UIFont
     {
