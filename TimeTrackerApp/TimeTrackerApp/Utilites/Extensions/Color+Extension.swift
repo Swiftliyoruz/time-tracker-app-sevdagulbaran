@@ -19,7 +19,7 @@ extension UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    class var pink: UIColor {
+    class var customPink: UIColor {
         .rgb(fromHex: 0xFD5B71)
     }
     class var lightBackground: UIColor {
