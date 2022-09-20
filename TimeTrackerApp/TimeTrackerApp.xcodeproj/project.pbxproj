@@ -69,13 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5249702128D118260060BACB /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tabbar;
-			sourceTree = "<group>";
-		};
 		5249702428D118C40060BACB /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +158,6 @@
 				5249702828D119200060BACB /* Report */,
 				5249702528D118DC0060BACB /* Add */,
 				5249702428D118C40060BACB /* Home */,
-				5249702128D118260060BACB /* Tabbar */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

@@ -89,6 +89,11 @@
                 <constraint firstAttribute="bottom" secondItem="pPA-h9-KBl" secondAttribute="bottom" constant="16" id="rHw-ne-70K"/>
             </constraints>
             <size key="customSize" width="317" height="139"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="16"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="cellPalyButton" destination="O07-Ha-YWj" id="SKo-MK-QOs"/>
                 <outlet property="cellSecondCategoryLabel" destination="pPA-h9-KBl" id="2F8-wF-QPO"/>

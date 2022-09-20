@@ -72,6 +72,11 @@
                                     <constraint firstItem="Vbj-1x-tcl" firstAttribute="leading" secondItem="C89-vt-Akq" secondAttribute="leading" constant="16" id="xZM-FG-Oya"/>
                                     <constraint firstAttribute="width" constant="382" id="zGU-De-xk9"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sl-tN-Dm5">
                                 <rect key="frame" x="16" y="310" width="57.5" height="33"/>
@@ -89,6 +94,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DlQ-DE-c6C"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dbG-NV-dZg"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ea-ZN-QVW">
                                 <rect key="frame" x="324" y="310" width="74" height="33"/>
@@ -103,7 +112,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="LightGrey"/>
+                        <color key="backgroundColor" name="lightGrey"/>
                         <constraints>
                             <constraint firstItem="6Sl-tN-Dm5" firstAttribute="top" secondItem="C89-vt-Akq" secondAttribute="bottom" constant="32" id="0Tj-oO-DKy"/>
                             <constraint firstItem="lWH-3r-5f4" firstAttribute="top" secondItem="6Sl-tN-Dm5" secondAttribute="bottom" constant="16" id="0w6-TH-cUA"/>
@@ -179,6 +188,11 @@
                                     <fontDescription key="titleFontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
                                     <color key="baseForegroundColor" name="black"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="quitButtonTapped:" destination="QgA-IL-lrp" eventType="touchUpInside" id="4X4-29-ldf"/>
                                 </connections>
@@ -194,8 +208,15 @@
                                     <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                                     <color key="baseForegroundColor" name="black"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="finishButtonTapped:" destination="QgA-IL-lrp" eventType="touchUpInside" id="bdj-bw-vh8"/>
+                                    <action selector="finis:" destination="QgA-IL-lrp" eventType="touchUpInside" id="VnP-Om-TTa"/>
+                                    <action selector="finishButtonTapped:" destination="QgA-IL-lrp" eventType="touchUpInside" id="flv-vW-0eG"/>
+                                    <action selector="sd:" destination="QgA-IL-lrp" eventType="touchUpInside" id="5JP-I0-brl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -238,7 +259,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="finishButton" destination="7Be-RV-ijE" id="OPd-S7-thJ"/>
+                        <outlet property="finishButton" destination="7Be-RV-ijE" id="Qvb-vZ-iNd"/>
                         <outlet property="projectNameLabel" destination="7Hs-em-giv" id="xqE-sF-qei"/>
                         <outlet property="quitButton" destination="3r9-LI-i2V" id="nAO-dg-6jT"/>
                         <outlet property="taskCategoryButton" destination="u7h-Pb-DF1" id="baD-LW-kSP"/>
@@ -313,6 +334,11 @@
                                     <constraint firstAttribute="width" constant="180" id="gw8-y3-vi3"/>
                                     <constraint firstItem="nd4-xc-NPi" firstAttribute="top" secondItem="fE8-ie-q3B" secondAttribute="top" constant="16" id="h0x-az-kZr"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYV-D4-Afm">
                                 <rect key="frame" x="218" y="130" width="180" height="132"/>
@@ -351,6 +377,11 @@
                                     <constraint firstItem="HzF-Nj-Cnb" firstAttribute="top" secondItem="kYV-D4-Afm" secondAttribute="top" constant="16" id="ldZ-Kz-POl"/>
                                     <constraint firstItem="qEc-6I-WVI" firstAttribute="leading" secondItem="kYV-D4-Afm" secondAttribute="leading" constant="16" id="xff-Sy-5eB"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sfi-ZW-cuz">
                                 <rect key="frame" x="48" y="302" width="318" height="32"/>
@@ -464,9 +495,6 @@
         <image name="time" width="24" height="24"/>
         <namedColor name="Black">
             <color red="0.027450980392156862" green="0.015686274509803921" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="LightGrey">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="black">
             <color red="0.027450980392156862" green="0.015686274509803921" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

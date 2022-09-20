@@ -34,5 +34,4 @@ extension UIColor {
     class var grey2: UIColor {
         rgb(fromHex: 0x4F4F4F)
     }
-    
 }
