@@ -219,7 +219,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rasion Project" id="0hj-f7-46a">
                         <barButtonItem key="leftBarButtonItem" title=" " image="arrowBack" id="VVl-3y-69E">
-                            <color key="tintColor" name="Black"/>
+                            <color key="tintColor" name="black"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="u7h-Pb-DF1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="TOn-er-ick">
@@ -376,7 +376,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Productivity" id="T4m-C9-bHW">
                         <barButtonItem key="leftBarButtonItem" image="arrowBack" id="fgu-cY-qqW">
-                            <color key="tintColor" name="Black"/>
+                            <color key="tintColor" name="black"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
