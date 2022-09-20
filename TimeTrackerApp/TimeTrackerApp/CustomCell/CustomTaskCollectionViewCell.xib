@@ -94,9 +94,9 @@
                 <outlet property="cellSecondCategoryLabel" destination="pPA-h9-KBl" id="2F8-wF-QPO"/>
                 <outlet property="cellTimeLAbel" destination="kjr-fz-qEg" id="9NJ-vM-NE3"/>
                 <outlet property="cellTitleLabel" destination="2cV-KX-ffj" id="Qwe-Dk-8bk"/>
-                <outlet property="cellfirstCategoriyLabel" destination="ZNc-iU-Z4o" id="Avz-wl-tBV"/>
+                <outlet property="cellfirstCategoryLabel" destination="ZNc-iU-Z4o" id="Bt4-Sv-rUT"/>
             </connections>
-            <point key="canvasLocation" x="203.62318840579712" y="91.741071428571431"/>
+            <point key="canvasLocation" x="53" y="90"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -159,18 +159,22 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="6ou-5d-HZN">
-                                <rect key="frame" x="126" y="397" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jo2-9N-clT">
+                                <rect key="frame" x="16" y="283" width="382" height="330"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ehV-lW-WcD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7Hs-em-giv" firstAttribute="top" secondItem="ehV-lW-WcD" secondAttribute="top" constant="95" id="0me-eF-4h7"/>
+                            <constraint firstItem="ehV-lW-WcD" firstAttribute="bottom" secondItem="jo2-9N-clT" secondAttribute="bottom" constant="200" id="F9U-u6-as2"/>
                             <constraint firstItem="7Hs-em-giv" firstAttribute="leading" secondItem="cEh-FT-kuK" secondAttribute="trailing" constant="12" id="FdO-1t-e7P"/>
+                            <constraint firstItem="ehV-lW-WcD" firstAttribute="trailing" secondItem="jo2-9N-clT" secondAttribute="trailing" constant="16" id="Hcq-hD-5g7"/>
+                            <constraint firstItem="jo2-9N-clT" firstAttribute="leading" secondItem="ehV-lW-WcD" secondAttribute="leading" constant="16" id="Oj9-Ju-y22"/>
                             <constraint firstItem="cEh-FT-kuK" firstAttribute="leading" secondItem="ehV-lW-WcD" secondAttribute="leading" constant="138" id="PaF-67-ZL2"/>
                             <constraint firstItem="cEh-FT-kuK" firstAttribute="top" secondItem="ehV-lW-WcD" secondAttribute="top" constant="95" id="cSt-LT-7lu"/>
+                            <constraint firstItem="jo2-9N-clT" firstAttribute="centerY" secondItem="SY6-eC-9Ry" secondAttribute="centerY" id="jKb-xm-aRZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rasion Project" id="0hj-f7-46a">
@@ -192,6 +196,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myFrameView" destination="jo2-9N-clT" id="hVU-zj-lfR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQ4-jO-5wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,7 +235,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fE8-ie-q3B">
-                                <rect key="frame" x="16" y="130" width="160" height="132"/>
+                                <rect key="frame" x="16" y="130" width="180" height="132"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-xc-NPi">
                                         <rect key="frame" x="16" y="16" width="32" height="32"/>
@@ -237,8 +244,8 @@
                                             <constraint firstAttribute="height" constant="32" id="UaH-eg-IM5"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Completed" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36P-2M-0zP">
-                                        <rect key="frame" x="60" y="16" width="118" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Task Completed" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36P-2M-0zP">
+                                        <rect key="frame" x="60" y="16" width="120" height="19"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -258,12 +265,12 @@
                                     <constraint firstItem="0Uy-QD-gDb" firstAttribute="top" secondItem="nd4-xc-NPi" secondAttribute="bottom" constant="28" id="DUO-iL-LOy"/>
                                     <constraint firstItem="36P-2M-0zP" firstAttribute="top" secondItem="nd4-xc-NPi" secondAttribute="top" id="WQi-cc-aro"/>
                                     <constraint firstItem="36P-2M-0zP" firstAttribute="leading" secondItem="nd4-xc-NPi" secondAttribute="trailing" constant="12" id="fJO-oW-PrT"/>
-                                    <constraint firstAttribute="width" constant="160" id="gw8-y3-vi3"/>
+                                    <constraint firstAttribute="width" constant="180" id="gw8-y3-vi3"/>
                                     <constraint firstItem="nd4-xc-NPi" firstAttribute="top" secondItem="fE8-ie-q3B" secondAttribute="top" constant="16" id="h0x-az-kZr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYV-D4-Afm">
-                                <rect key="frame" x="238" y="130" width="160" height="132"/>
+                                <rect key="frame" x="218" y="130" width="180" height="132"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch" translatesAutoresizingMaskIntoConstraints="NO" id="HzF-Nj-Cnb">
                                         <rect key="frame" x="16" y="16" width="32" height="32"/>
@@ -274,6 +281,9 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhG-Tu-WK4">
                                         <rect key="frame" x="60" y="16" width="104.5" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="104.5" id="c68-FO-TjQ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -289,7 +299,7 @@
                                 <constraints>
                                     <constraint firstItem="nhG-Tu-WK4" firstAttribute="top" secondItem="kYV-D4-Afm" secondAttribute="top" constant="16" id="BFp-be-HNa"/>
                                     <constraint firstItem="nhG-Tu-WK4" firstAttribute="leading" secondItem="HzF-Nj-Cnb" secondAttribute="trailing" constant="12" id="Ghh-xO-Jdw"/>
-                                    <constraint firstAttribute="width" constant="160" id="Kku-3r-CGl"/>
+                                    <constraint firstAttribute="width" constant="180" id="Kku-3r-CGl"/>
                                     <constraint firstAttribute="height" constant="132" id="Smf-fB-v5E"/>
                                     <constraint firstItem="HzF-Nj-Cnb" firstAttribute="leading" secondItem="kYV-D4-Afm" secondAttribute="leading" constant="16" id="cO5-la-TKT"/>
                                     <constraint firstItem="qEc-6I-WVI" firstAttribute="top" secondItem="HzF-Nj-Cnb" secondAttribute="bottom" constant="28" id="f8j-0U-j4v"/>
@@ -297,14 +307,26 @@
                                     <constraint firstItem="qEc-6I-WVI" firstAttribute="leading" secondItem="kYV-D4-Afm" secondAttribute="leading" constant="16" id="xff-Sy-5eB"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sfi-ZW-cuz">
+                                <rect key="frame" x="48" y="302" width="318" height="32"/>
+                                <color key="backgroundColor" name="lightPurple"/>
+                                <segments>
+                                    <segment title="Day"/>
+                                    <segment title="Week"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="des-E4-b2O"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="lightGrey"/>
                         <constraints>
                             <constraint firstItem="fE8-ie-q3B" firstAttribute="top" secondItem="des-E4-b2O" secondAttribute="top" constant="42" id="7MH-zM-YRr"/>
                             <constraint firstItem="kYV-D4-Afm" firstAttribute="top" secondItem="des-E4-b2O" secondAttribute="top" constant="42" id="O9u-pp-mVH"/>
+                            <constraint firstItem="sfi-ZW-cuz" firstAttribute="top" secondItem="fE8-ie-q3B" secondAttribute="bottom" constant="40" id="Ze3-NG-WO8"/>
                             <constraint firstItem="fE8-ie-q3B" firstAttribute="leading" secondItem="des-E4-b2O" secondAttribute="leading" constant="16" id="j7z-je-Wwb"/>
+                            <constraint firstItem="sfi-ZW-cuz" firstAttribute="leading" secondItem="des-E4-b2O" secondAttribute="leading" constant="48" id="pTe-Hz-59x"/>
                             <constraint firstItem="des-E4-b2O" firstAttribute="trailing" secondItem="kYV-D4-Afm" secondAttribute="trailing" constant="16" id="s7F-Tk-MxR"/>
+                            <constraint firstItem="des-E4-b2O" firstAttribute="trailing" secondItem="sfi-ZW-cuz" secondAttribute="trailing" constant="48" id="xAp-ot-O9z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Productivity" id="T4m-C9-bHW">
@@ -312,6 +334,15 @@
                             <color key="tintColor" name="Black"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="completedLabel" destination="36P-2M-0zP" id="JGV-YZ-jf5"/>
+                        <outlet property="completedTimeLabel" destination="0Uy-QD-gDb" id="wCG-yp-T68"/>
+                        <outlet property="completedView" destination="fE8-ie-q3B" id="nFG-g3-tog"/>
+                        <outlet property="dayWeekSegmented" destination="sfi-ZW-cuz" id="KwT-Yk-12q"/>
+                        <outlet property="timeDurationHourLabel" destination="qEc-6I-WVI" id="J3U-ce-ufF"/>
+                        <outlet property="timeDurationLabel" destination="nhG-Tu-WK4" id="5Yb-8I-Pmn"/>
+                        <outlet property="timeDurationView" destination="kYV-D4-Afm" id="gUp-iW-lK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2y-WN-lxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,6 +431,9 @@
         </namedColor>
         <namedColor name="lightGrey">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightPurple">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pink">
             <color red="0.99215686274509807" green="0.35686274509803922" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

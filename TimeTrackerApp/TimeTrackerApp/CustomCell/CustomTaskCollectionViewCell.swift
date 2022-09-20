@@ -12,7 +12,7 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var cellTitleLabel: UILabel!
     @IBOutlet private weak var cellTimeLAbel: UILabel!
-    @IBOutlet private weak var cellfirstCategoriyLabel: UILabel!
+    @IBOutlet private weak var cellfirstCategoryLabel: UILabel!
     @IBOutlet private weak var cellPalyButton: UIButton!
     @IBOutlet private weak var cellSecondCategoryLabel: UILabel!
     
@@ -29,8 +29,7 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     func setupUI(){
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 16
-        cellfirstCategoriyLabel.layer.masksToBounds = true
-        cellfirstCategoriyLabel.layer.cornerRadius = 3
+
     }
     
 }
