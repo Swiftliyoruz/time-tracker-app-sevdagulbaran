@@ -27,8 +27,9 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerCollectionView()
         tabbarConfig()
+        setupUI()
+        registerCollectionView()
         
     }
 }
@@ -36,13 +37,19 @@ final class HomeViewController: UIViewController {
 // MARK: - Private Functions
 
 private extension HomeViewController {
+     
     func tabbarConfig(){
         guard let tabbar = self.tabBarController?.tabBar else { return }
         tabbar.tintColor = .blackBackground
         tabbar.unselectedItemTintColor = .lightBackground
         tabbar.layer.cornerRadius = 30
     }
-    func registerCollectionView(){
+   func setupUI() {
+        cardView.layer.masksToBounds = true
+        cardView.layer.cornerRadius = 16
+        cardView.layer.borderWidth = 0.3
+    }
+    func registerCollectionView() {
         let nib = UINib(nibName: Constant.cellNibName, bundle: nil)
         taskCollectionView.register(nib ,forCellWithReuseIdentifier: Constant.cellReusIdentifier)
     }
@@ -70,7 +77,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
-        cell.setCell()
+        
         return cell
     }
 }

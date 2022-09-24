@@ -17,9 +17,21 @@ final class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
     }
 }
+// MARK: - Private Functions
+
+private extension AddViewController {
+    
+     func setupUI(){
+         finishButton.layer.masksToBounds = true
+         finishButton.layer.cornerRadius = 8
+         quitButton.layer.masksToBounds = true
+         quitButton.layer.cornerRadius = 8
+     }
+}
+
 // MARK: - Actions
 
 extension AddViewController {
@@ -30,3 +42,4 @@ extension AddViewController {
     @IBAction func quitButtonTapped(_ sender: Any) {
     }
 }
+ 

@@ -19,6 +19,18 @@ final class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+}
 
+// MARK: - Private Functions
+
+private extension ReportViewController {
+    
+      func setupUI() {
+        completedView.layer.masksToBounds = true
+        completedView.layer.cornerRadius = 8
+        timeDurationView.layer.masksToBounds = true
+        timeDurationView.layer.cornerRadius = 8
     }
 }

@@ -17,10 +17,15 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
     }
+}
+
+
+private extension CustomTaskCollectionViewCell {
     
-    func setCell() {
-        cellTitleLabel?.text = "Project Title"
-        cellTimeLAbel?.text = "23:08:12"
+    func setupUI() {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 16
     }
 }
