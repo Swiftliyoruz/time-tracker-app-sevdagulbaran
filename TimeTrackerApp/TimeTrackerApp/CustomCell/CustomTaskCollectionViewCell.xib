@@ -69,6 +69,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="play"/>
+                        <connections>
+                            <action selector="playButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="nv5-1e-dwp"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -90,11 +93,11 @@
             </constraints>
             <size key="customSize" width="317" height="139"/>
             <connections>
-                <outlet property="cellPalyButton" destination="O07-Ha-YWj" id="SKo-MK-QOs"/>
-                <outlet property="cellSecondCategoryLabel" destination="pPA-h9-KBl" id="2F8-wF-QPO"/>
-                <outlet property="cellTimeLAbel" destination="kjr-fz-qEg" id="9NJ-vM-NE3"/>
-                <outlet property="cellTitleLabel" destination="2cV-KX-ffj" id="Qwe-Dk-8bk"/>
-                <outlet property="cellfirstCategoryLabel" destination="ZNc-iU-Z4o" id="Bt4-Sv-rUT"/>
+                <outlet property="firstCategoryLabel" destination="ZNc-iU-Z4o" id="oGP-Rb-YA8"/>
+                <outlet property="playButton" destination="O07-Ha-YWj" id="tDu-hD-pf8"/>
+                <outlet property="secondCategoryLabel" destination="pPA-h9-KBl" id="y94-0C-y8t"/>
+                <outlet property="timeLabel" destination="kjr-fz-qEg" id="yDP-Ng-Mah"/>
+                <outlet property="titleLabel" destination="2cV-KX-ffj" id="1M0-2W-k6T"/>
             </connections>
             <point key="canvasLocation" x="53" y="90"/>
         </collectionViewCell>

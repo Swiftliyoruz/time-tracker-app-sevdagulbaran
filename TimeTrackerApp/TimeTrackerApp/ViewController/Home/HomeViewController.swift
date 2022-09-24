@@ -10,8 +10,6 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     private enum Constant {
-        static let tableViewData = 5
-        static let cellSpacingHeight: CGFloat = 16.0
         static let cellNibName = "CustomTaskCollectionViewCell"
         static let cellReusIdentifier = "CustomTaskCollectionViewCell"
     }
@@ -24,34 +22,13 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var taskCollectionView: UICollectionView!
     @IBOutlet private weak var todayLabel: UILabel!
     
+    private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
+        viewModel.viewDidLoad()
         
-        tabbarConfig()
-        setupUI()
-        registerCollectionView()
-        
-    }
-}
-
-// MARK: - Private Functions
-
-private extension HomeViewController {
-     
-    func tabbarConfig(){
-        guard let tabbar = self.tabBarController?.tabBar else { return }
-        tabbar.tintColor = .blackBackground
-        tabbar.unselectedItemTintColor = .lightBackground
-        tabbar.layer.cornerRadius = 30
-    }
-   func setupUI() {
-        cardView.layer.masksToBounds = true
-        cardView.layer.cornerRadius = 16
-        cardView.layer.borderWidth = 0.3
-    }
-    func registerCollectionView() {
-        let nib = UINib(nibName: Constant.cellNibName, bundle: nil)
-        taskCollectionView.register(nib ,forCellWithReuseIdentifier: Constant.cellReusIdentifier)
     }
 }
 
@@ -60,10 +37,13 @@ private extension HomeViewController {
 extension HomeViewController {
     
     @IBAction func detailsButtonTapped(_ sender: Any) {
+        viewModel.detailsButtonTapped()
     }
     @IBAction func moreButtonTapped(_ sender: Any) {
+        viewModel.moreButtonTapped()
     }
     @IBAction func seeAllButtonTapped(_ sender: Any) {
+        viewModel.seeAllButtonTapped()
     }
 }
 
@@ -72,7 +52,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        Constant.tableViewData
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,10 +61,24 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
 }
-// MARK: - UICollectionViewDelegate
+// MARK: - HomeViewModelDelegate
 
-extension HomeViewController: UICollectionViewDelegate {
+extension HomeViewController: HomeViewModelDelegate {
+    func setupUI() {
+        cardView.layer.masksToBounds = true
+        cardView.layer.cornerRadius = 16
+        cardView.layer.borderWidth = 0.3
+    }
     
+    func tabbarConfig(){
+        guard let tabbar = self.tabBarController?.tabBar else { return }
+        tabbar.tintColor = .blackBackground
+        tabbar.unselectedItemTintColor = .lightBackground
+        tabbar.layer.cornerRadius = 30
+    }
+    
+    func registerCollectionView() {
+        let nib = UINib(nibName: Constant.cellNibName, bundle: nil)
+        taskCollectionView.register(nib ,forCellWithReuseIdentifier: Constant.cellReusIdentifier)
+    }
 }
-
-

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5249702728D118F90060BACB /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702628D118F90060BACB /* AddViewController.swift */; };
 		5249702A28D119340060BACB /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702928D119340060BACB /* ReportViewController.swift */; };
+		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
 		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
 		5281508728C7E28600E92B21 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */; };
@@ -29,11 +30,15 @@
 		52AF0BEE28C672CD00C14DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AF0BEC28C672CD00C14DB3 /* LaunchScreen.storyboard */; };
 		52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */; };
 		52B4169D28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */; };
+		52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4828DF0847006879DF /* HomeViewModel.swift */; };
+		52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */; };
+		52D5CF4D28DF2D02006879DF /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4C28DF2D02006879DF /* AddViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5249702628D118F90060BACB /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		5249702928D119340060BACB /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		52AF0BEF28C672CD00C14DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTaskCollectionViewCell.xib; sourceTree = "<group>"; };
+		52D5CF4828DF0847006879DF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		52D5CF4C28DF2D02006879DF /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				52AF0BE528C672C700C14DB3 /* HomeViewController.swift */,
+				52D5CF4828DF0847006879DF /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -81,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5249702628D118F90060BACB /* AddViewController.swift */,
+				52D5CF4C28DF2D02006879DF /* AddViewModel.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -89,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5249702928D119340060BACB /* ReportViewController.swift */,
+				52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 			children = (
 				52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */,
 				52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */,
+				525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -305,13 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D5CF4D28DF2D02006879DF /* AddViewModel.swift in Sources */,
 				52AF0BE628C672C700C14DB3 /* HomeViewController.swift in Sources */,
+				52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */,
 				5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */,
 				5249702728D118F90060BACB /* AddViewController.swift in Sources */,
+				52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */,
 				52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */,
 				52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */,
 				5249702A28D119340060BACB /* ReportViewController.swift in Sources */,
 				52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */,
+				525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */,
 				5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

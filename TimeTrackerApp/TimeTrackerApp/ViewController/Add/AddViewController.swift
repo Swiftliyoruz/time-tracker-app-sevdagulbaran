@@ -15,21 +15,12 @@ final class AddViewController: UIViewController {
     @IBOutlet private weak var projectNameLabel: UILabel!
     @IBOutlet private weak var taskCategoryButton: UIBarButtonItem!
     
+    private lazy var viewModel: AddViewModelInterface = AddViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        viewModel.delegate = self
+        viewModel.viewDidLoad()
     }
-}
-// MARK: - Private Functions
-
-private extension AddViewController {
-    
-     func setupUI(){
-         finishButton.layer.masksToBounds = true
-         finishButton.layer.cornerRadius = 8
-         quitButton.layer.masksToBounds = true
-         quitButton.layer.cornerRadius = 8
-     }
 }
 
 // MARK: - Actions
@@ -37,9 +28,22 @@ private extension AddViewController {
 extension AddViewController {
     
     @IBAction func finishButtonTapped(_ sender: Any) {
+        viewModel.finishButtonTapped()
     }
     
     @IBAction func quitButtonTapped(_ sender: Any) {
+        viewModel.quitButtonTapped()
     }
 }
- 
+
+// MARK: - AddViewModelDelegate
+
+extension AddViewController: AddViewModelDelegate {
+    
+    func setupUI(){
+        finishButton.layer.masksToBounds = true
+        finishButton.layer.cornerRadius = 8
+        quitButton.layer.masksToBounds = true
+        quitButton.layer.cornerRadius = 8
+    }
+}

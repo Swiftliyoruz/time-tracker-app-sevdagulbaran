@@ -199,9 +199,7 @@
                                     <color key="baseForegroundColor" name="black"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="finis:" destination="QgA-IL-lrp" eventType="touchUpInside" id="VnP-Om-TTa"/>
                                     <action selector="finishButtonTapped:" destination="QgA-IL-lrp" eventType="touchUpInside" id="flv-vW-0eG"/>
-                                    <action selector="sd:" destination="QgA-IL-lrp" eventType="touchUpInside" id="5JP-I0-brl"/>
                                 </connections>
                             </button>
                         </subviews>
