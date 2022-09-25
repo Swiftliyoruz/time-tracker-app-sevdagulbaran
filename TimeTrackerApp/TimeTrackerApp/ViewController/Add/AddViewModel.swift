@@ -10,7 +10,7 @@ import Foundation
 protocol AddViewModelDelegate: AnyObject {
     
     func setupUI()
-    func configureActionItemMenu()
+    func configureActionSelectMainCategory()
 }
 protocol AddViewModelInterface {
     var delegate: AddViewModelDelegate? { get set}
@@ -27,7 +27,7 @@ extension AddViewModel: AddViewModelInterface {
     
     func viewDidLoad() {
         delegate?.setupUI()
-        delegate?.configureActionItemMenu()
+        delegate?.configureActionSelectMainCategory()
     }
     
     func addButtonTapped() {

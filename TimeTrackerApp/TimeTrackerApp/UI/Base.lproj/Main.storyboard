@@ -81,7 +81,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lWH-3r-5f4">
-                                <rect key="frame" x="16" y="359" width="382" height="454"/>
+                                <rect key="frame" x="16" y="359" width="382" height="444"/>
                                 <color key="backgroundColor" name="lightGrey"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z2N-XY-zOz">
                                     <size key="itemSize" width="343" height="84"/>
@@ -114,7 +114,7 @@
                             <constraint firstItem="lWH-3r-5f4" firstAttribute="top" secondItem="6Sl-tN-Dm5" secondAttribute="bottom" constant="16" id="0w6-TH-cUA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lWH-3r-5f4" secondAttribute="trailing" constant="16" id="2WU-9R-Qcr"/>
                             <constraint firstItem="C89-vt-Akq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="6Eg-GG-cOc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lWH-3r-5f4" secondAttribute="bottom" id="Ro8-ch-9Fo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lWH-3r-5f4" secondAttribute="bottom" constant="10" id="Ro8-ch-9Fo"/>
                             <constraint firstItem="8Ea-ZN-QVW" firstAttribute="top" secondItem="C89-vt-Akq" secondAttribute="bottom" constant="32" id="YVj-qr-sQr"/>
                             <constraint firstItem="lWH-3r-5f4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bxF-a7-Lbn"/>
                             <constraint firstItem="C89-vt-Akq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="g6x-3t-GSL"/>

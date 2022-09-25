@@ -32,19 +32,21 @@ extension AddViewController {
     }
 }
 
-// MARK: - 
+// MARK: - AddViewModelDelegate
+
 extension AddViewController: AddViewModelDelegate {
-    func configureActionItemMenu() {
-        selectMainCategoryButton.menu = UIMenu(title: "", children: [UIAction(title: "Option 1", handler: { (action) in
-                print("Option 1 was selected")
-            }), UIAction(title: "Option 2", handler: { (action) in
-                print("Option 2 was selected")
-            }), UIAction(title: "Option 3", handler: { (action) in
-                print("Option 3 was selected")
-            })])
-        }
+    func configureActionSelectMainCategory() {
+        selectMainCategoryButton.menu = UIMenu(title: "", children: [UIAction(title: "Selected Main Category", handler: { (action) in
+            print("Selected Main Category")
+        }), UIAction(title: "Personel", handler: { (action) in
+            print("Personel was selected")
+        }), UIAction(title: "Work", handler: { (action) in
+            print("Work was selected")
+        })])
+        selectMainCategoryButton.showsMenuAsPrimaryAction = true
+        selectMainCategoryButton.changesSelectionAsPrimaryAction = true
+    }
     
     func setupUI() {
-        
     }
 }
