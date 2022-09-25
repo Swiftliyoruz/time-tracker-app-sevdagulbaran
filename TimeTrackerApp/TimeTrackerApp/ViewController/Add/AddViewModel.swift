@@ -2,22 +2,21 @@
 //  AddViewModel.swift
 //  TimeTrackerApp
 //
-//  Created by Sevda Gul Baran on 24.09.2022.
+//  Created by Sevda Gul Baran on 25.09.2022.
 //
 
 import Foundation
 
-
 protocol AddViewModelDelegate: AnyObject {
+    
     func setupUI()
+    func configureActionItemMenu()
 }
-
 protocol AddViewModelInterface {
     var delegate: AddViewModelDelegate? { get set}
     
     func viewDidLoad()
-    func finishButtonTapped()
-    func quitButtonTapped()
+    func addButtonTapped()
 }
 
 final class AddViewModel {
@@ -25,15 +24,13 @@ final class AddViewModel {
 }
 
 extension AddViewModel: AddViewModelInterface {
+    
     func viewDidLoad() {
         delegate?.setupUI()
+        delegate?.configureActionItemMenu()
     }
     
-    func finishButtonTapped() {
-        print("tapped")
-    }
-    
-    func quitButtonTapped() {
+    func addButtonTapped() {
         print("tapped")
     }
 }

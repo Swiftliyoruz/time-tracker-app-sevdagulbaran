@@ -26,7 +26,7 @@ protocol HomeViewModelInterface {
 
 private extension HomeViewModel {
     enum Constant {
-        static let tableViewData = 5
+        static let tableViewData = 4
     }
 }
 

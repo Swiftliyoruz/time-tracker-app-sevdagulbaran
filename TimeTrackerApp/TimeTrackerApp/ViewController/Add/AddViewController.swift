@@ -2,48 +2,49 @@
 //  AddViewController.swift
 //  TimeTrackerApp
 //
-//  Created by Sevda Gul Baran on 13.09.2022.
+//  Created by Sevda Gul Baran on 25.09.2022.
 //
 
 import UIKit
 
-final class AddViewController: UIViewController {
+class AddViewController: UIViewController {
     
-    @IBOutlet private weak var timeLabel: UILabel!
-    @IBOutlet private weak var finishButton: UIButton!
-    @IBOutlet private weak var quitButton: UIButton!
-    @IBOutlet private weak var projectNameLabel: UILabel!
-    @IBOutlet private weak var taskCategoryButton: UIBarButtonItem!
+    @IBOutlet private weak var taskTitleTextField: UITextField!
+    @IBOutlet private weak var selectImageButtton: UIButton!
+    @IBOutlet private weak var selectMainCategoryButton: UIButton!
+    @IBOutlet private weak var subCategoryTextField: UITextField!
     
     private lazy var viewModel: AddViewModelInterface = AddViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        viewModel.delegate =  self
         viewModel.viewDidLoad()
+        
+        
     }
 }
-
 // MARK: - Actions
 
 extension AddViewController {
-    
-    @IBAction func finishButtonTapped(_ sender: Any) {
-        viewModel.finishButtonTapped()
-    }
-    
-    @IBAction func quitButtonTapped(_ sender: Any) {
-        viewModel.quitButtonTapped()
+    @IBAction func addButtonTapped(_ sender: Any) {
+        viewModel.addButtonTapped()
     }
 }
 
-// MARK: - AddViewModelDelegate
-
+// MARK: - 
 extension AddViewController: AddViewModelDelegate {
+    func configureActionItemMenu() {
+        selectMainCategoryButton.menu = UIMenu(title: "", children: [UIAction(title: "Option 1", handler: { (action) in
+                print("Option 1 was selected")
+            }), UIAction(title: "Option 2", handler: { (action) in
+                print("Option 2 was selected")
+            }), UIAction(title: "Option 3", handler: { (action) in
+                print("Option 3 was selected")
+            })])
+        }
     
-    func setupUI(){
-        finishButton.layer.masksToBounds = true
-        finishButton.layer.cornerRadius = 8
-        quitButton.layer.masksToBounds = true
-        quitButton.layer.cornerRadius = 8
+    func setupUI() {
+        
     }
 }

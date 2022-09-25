@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5249702728D118F90060BACB /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702628D118F90060BACB /* AddViewController.swift */; };
+		5249702728D118F90060BACB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702628D118F90060BACB /* TaskViewController.swift */; };
 		5249702A28D119340060BACB /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702928D119340060BACB /* ReportViewController.swift */; };
 		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
@@ -22,6 +22,8 @@
 		5281508E28C7E28600E92B21 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508428C7E28500E92B21 /* Rubik-Bold.ttf */; };
 		5281508F28C7E28600E92B21 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508528C7E28600E92B21 /* Rubik-Regular.ttf */; };
 		5281509028C7E28600E92B21 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508628C7E28600E92B21 /* Rubik-BoldItalic.ttf */; };
+		52A187B328E0E976006EDBC5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A187B228E0E976006EDBC5 /* AddViewController.swift */; };
+		52A187B528E0E988006EDBC5 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A187B428E0E988006EDBC5 /* AddViewModel.swift */; };
 		52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF0BE128C672C700C14DB3 /* AppDelegate.swift */; };
 		52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF0BE328C672C700C14DB3 /* SceneDelegate.swift */; };
 		52AF0BE628C672C700C14DB3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF0BE528C672C700C14DB3 /* HomeViewController.swift */; };
@@ -32,11 +34,11 @@
 		52B4169D28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */; };
 		52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4828DF0847006879DF /* HomeViewModel.swift */; };
 		52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */; };
-		52D5CF4D28DF2D02006879DF /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4C28DF2D02006879DF /* AddViewModel.swift */; };
+		52D5CF4D28DF2D02006879DF /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5249702628D118F90060BACB /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		5249702628D118F90060BACB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		5249702928D119340060BACB /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		5281508428C7E28500E92B21 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		5281508528C7E28600E92B21 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		5281508628C7E28600E92B21 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		52A187B228E0E976006EDBC5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		52A187B428E0E988006EDBC5 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		52AF0BDE28C672C700C14DB3 /* TimeTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AF0BE128C672C700C14DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AF0BE328C672C700C14DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +67,7 @@
 		52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTaskCollectionViewCell.xib; sourceTree = "<group>"; };
 		52D5CF4828DF0847006879DF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
-		52D5CF4C28DF2D02006879DF /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +90,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		5249702528D118DC0060BACB /* Add */ = {
+		5249702528D118DC0060BACB /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				5249702628D118F90060BACB /* AddViewController.swift */,
-				52D5CF4C28DF2D02006879DF /* AddViewModel.swift */,
+				5249702628D118F90060BACB /* TaskViewController.swift */,
+				52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */,
 			);
-			path = Add;
+			path = Task;
 			sourceTree = "<group>";
 		};
 		5249702828D119200060BACB /* Report */ = {
@@ -166,8 +170,9 @@
 		5281507A28C7E1D300E92B21 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				52A187B128E0E954006EDBC5 /* Add */,
 				5249702828D119200060BACB /* Report */,
-				5249702528D118DC0060BACB /* Add */,
+				5249702528D118DC0060BACB /* Task */,
 				5249702428D118C40060BACB /* Home */,
 			);
 			path = ViewController;
@@ -198,6 +203,15 @@
 				5281508528C7E28600E92B21 /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52A187B128E0E954006EDBC5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				52A187B228E0E976006EDBC5 /* AddViewController.swift */,
+				52A187B428E0E988006EDBC5 /* AddViewModel.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 		52AF0BD528C672C700C14DB3 = {
@@ -317,17 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D5CF4D28DF2D02006879DF /* AddViewModel.swift in Sources */,
+				52D5CF4D28DF2D02006879DF /* TaskViewModel.swift in Sources */,
 				52AF0BE628C672C700C14DB3 /* HomeViewController.swift in Sources */,
+				52A187B528E0E988006EDBC5 /* AddViewModel.swift in Sources */,
 				52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */,
 				5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */,
-				5249702728D118F90060BACB /* AddViewController.swift in Sources */,
+				5249702728D118F90060BACB /* TaskViewController.swift in Sources */,
 				52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */,
 				52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */,
 				52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */,
 				5249702A28D119340060BACB /* ReportViewController.swift in Sources */,
 				52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */,
 				525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */,
+				52A187B328E0E976006EDBC5 /* AddViewController.swift in Sources */,
 				5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
