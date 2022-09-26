@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+final class AddViewController: UIViewController {
     
     @IBOutlet private weak var taskTitleTextField: UITextField!
     @IBOutlet private weak var selectImageButtton: UIButton!

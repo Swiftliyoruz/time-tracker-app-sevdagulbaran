@@ -12,6 +12,7 @@
 		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
 		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
+		527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527EE62128E267310005D268 /* TaskModel.xcdatamodeld */; };
 		5281508728C7E28600E92B21 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */; };
 		5281508828C7E28600E92B21 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */; };
 		5281508928C7E28600E92B21 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507F28C7E28500E92B21 /* Rubik-Light.ttf */; };
@@ -43,6 +44,7 @@
 		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		527EE62228E267310005D268 /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 		5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		5281507F28C7E28500E92B21 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -138,6 +140,13 @@
 			children = (
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		527EE62428E268DE0005D268 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		5281507728C7E1AE00E92B21 /* Resources */ = {
@@ -236,8 +245,10 @@
 				5281507828C7E1BC00E92B21 /* Application */,
 				52599CC628C80AD600215C4C /* Components */,
 				5281507B28C7E1FB00E92B21 /* CustomCell */,
+				527EE62428E268DE0005D268 /* DataManager */,
 				52AF0BEF28C672CD00C14DB3 /* Info.plist */,
 				5281507728C7E1AE00E92B21 /* Resources */,
+				527EE62128E267310005D268 /* TaskModel.xcdatamodeld */,
 				5281507928C7E1CA00E92B21 /* UI */,
 				5270B64228D0FA3E008EA044 /* Utilites */,
 				5281507A28C7E1D300E92B21 /* ViewController */,
@@ -336,6 +347,7 @@
 				52A187B528E0E988006EDBC5 /* AddViewModel.swift in Sources */,
 				52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */,
 				5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */,
+				527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */,
 				5249702728D118F90060BACB /* TaskViewController.swift in Sources */,
 				52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */,
 				52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */,
@@ -562,6 +574,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		527EE62128E267310005D268 /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				527EE62228E267310005D268 /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = 527EE62228E267310005D268 /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52AF0BD628C672C700C14DB3 /* Project object */;
 }
