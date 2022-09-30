@@ -11,6 +11,7 @@ protocol AddViewModelDelegate: AnyObject {
     
     func setupUI()
     func configureActionSelectMainCategory()
+    func configureActionSelectIcon()
 }
 protocol AddViewModelInterface {
     var delegate: AddViewModelDelegate? { get set}
@@ -28,6 +29,7 @@ extension AddViewModel: AddViewModelInterface {
     func viewDidLoad() {
         delegate?.setupUI()
         delegate?.configureActionSelectMainCategory()
+        delegate?.configureActionSelectIcon()
     }
     
     func addButtonTapped() {

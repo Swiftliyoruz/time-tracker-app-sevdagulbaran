@@ -12,6 +12,7 @@
 		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
 		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
+		527AFA3B28E75EC900C726CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AFA3A28E75EC900C726CB /* Constants.swift */; };
 		527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527EE62128E267310005D268 /* TaskModel.xcdatamodeld */; };
 		5281508728C7E28600E92B21 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */; };
 		5281508828C7E28600E92B21 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */; };
@@ -44,6 +45,7 @@
 		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		527AFA3A28E75EC900C726CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		527EE62228E267310005D268 /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 		5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
@@ -108,13 +110,6 @@
 				52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */,
 			);
 			path = Report;
-			sourceTree = "<group>";
-		};
-		52599CC628C80AD600215C4C /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		5270B64228D0FA3E008EA044 /* Utilites */ = {
@@ -219,6 +214,7 @@
 			children = (
 				52A187B228E0E976006EDBC5 /* AddViewController.swift */,
 				52A187B428E0E988006EDBC5 /* AddViewModel.swift */,
+				527AFA3A28E75EC900C726CB /* Constants.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -243,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				5281507828C7E1BC00E92B21 /* Application */,
-				52599CC628C80AD600215C4C /* Components */,
 				5281507B28C7E1FB00E92B21 /* CustomCell */,
 				527EE62428E268DE0005D268 /* DataManager */,
 				52AF0BEF28C672CD00C14DB3 /* Info.plist */,
@@ -349,6 +344,7 @@
 				5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */,
 				527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */,
 				5249702728D118F90060BACB /* TaskViewController.swift in Sources */,
+				527AFA3B28E75EC900C726CB /* Constants.swift in Sources */,
 				52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */,
 				52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */,
 				52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */,
