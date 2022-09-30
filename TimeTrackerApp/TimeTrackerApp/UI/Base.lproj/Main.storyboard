@@ -83,7 +83,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lWH-3r-5f4">
                                 <rect key="frame" x="16" y="359" width="382" height="444"/>
-                                <color key="backgroundColor" name="lightGrey"/>
+                                <color key="backgroundColor" name="lightBackground"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z2N-XY-zOz">
                                     <size key="itemSize" width="343" height="84"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -109,7 +109,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="lightGrey"/>
+                        <color key="backgroundColor" name="lightBackground"/>
                         <constraints>
                             <constraint firstItem="6Sl-tN-Dm5" firstAttribute="top" secondItem="C89-vt-Akq" secondAttribute="bottom" constant="32" id="0Tj-oO-DKy"/>
                             <constraint firstItem="lWH-3r-5f4" firstAttribute="top" secondItem="6Sl-tN-Dm5" secondAttribute="bottom" constant="16" id="0w6-TH-cUA"/>
@@ -270,8 +270,8 @@
                                     <constraint firstAttribute="height" constant="50" id="Lie-6p-uRE"/>
                                 </constraints>
                                 <color key="textColor" name="black"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="go"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sub Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEb-Al-UkR">
                                 <rect key="frame" x="16" y="582" width="382" height="80"/>
@@ -279,7 +279,7 @@
                                     <constraint firstAttribute="height" constant="80" id="kwb-iw-P8n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="go"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnU-8M-3jp">
                                 <rect key="frame" x="16" y="470" width="382" height="80"/>
@@ -424,7 +424,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="lightBackground"/>
+                                <color key="backgroundColor" name="lightPurple"/>
                                 <constraints>
                                     <constraint firstItem="0Uy-QD-gDb" firstAttribute="leading" secondItem="fE8-ie-q3B" secondAttribute="leading" constant="16" id="6hc-tB-CFX"/>
                                     <constraint firstAttribute="height" constant="132" id="8sI-UB-lSd"/>
@@ -460,7 +460,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="lightBackground"/>
+                                <color key="backgroundColor" name="lightPurple"/>
                                 <constraints>
                                     <constraint firstItem="nhG-Tu-WK4" firstAttribute="top" secondItem="kYV-D4-Afm" secondAttribute="top" constant="16" id="BFp-be-HNa"/>
                                     <constraint firstAttribute="trailing" secondItem="nhG-Tu-WK4" secondAttribute="trailing" id="Frm-Hv-11C"/>
@@ -489,7 +489,7 @@
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="des-E4-b2O"/>
-                        <color key="backgroundColor" name="lightGrey"/>
+                        <color key="backgroundColor" name="lightBackground"/>
                         <constraints>
                             <constraint firstItem="fE8-ie-q3B" firstAttribute="top" secondItem="des-E4-b2O" secondAttribute="top" constant="42" id="7MH-zM-YRr"/>
                             <constraint firstItem="kYV-D4-Afm" firstAttribute="top" secondItem="des-E4-b2O" secondAttribute="top" constant="42" id="O9u-pp-mVH"/>
@@ -567,6 +567,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemGrayColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="DmY-Yj-fVm" kind="relationship" relationship="viewControllers" id="5kY-wk-j00"/>
@@ -602,9 +603,6 @@
         <namedColor name="lightBackground">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lightGrey">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="lightPurple">
             <color red="0.9137254901960784" green="0.9137254901960784" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -614,6 +612,9 @@
         <namedColor name="transparentPink">
             <color red="1" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

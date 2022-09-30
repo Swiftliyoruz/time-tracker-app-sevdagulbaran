@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,33 +31,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Desing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cV-KX-ffj">
-                        <rect key="frame" x="76" y="16" width="70.5" height="19"/>
+                        <rect key="frame" x="76" y="16" width="70.5" height="20"/>
                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-iU-Z4o">
-                        <rect key="frame" x="76" y="44" width="30.5" height="24"/>
-                        <color key="backgroundColor" name="transparentPink"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="DBe-ii-ySp"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                        <color key="textColor" name="pink"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPA-h9-KBl">
-                        <rect key="frame" x="114.5" y="44" width="30.5" height="24"/>
-                        <color key="backgroundColor" name="transparentPink"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="u7U-nN-8F1"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                        <color key="textColor" name="pink"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:42:21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjr-fz-qEg">
-                        <rect key="frame" x="279" y="16" width="48" height="14.5"/>
+                        <rect key="frame" x="279" y="16" width="48" height="14"/>
                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
                         <color key="textColor" name="grey2"/>
                         <nil key="highlightedColor"/>
@@ -73,33 +54,77 @@
                             <action selector="playButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="nv5-1e-dwp"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mev-yt-hCR">
+                        <rect key="frame" x="76" y="44" width="44" height="23"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-8k-pjN">
+                                <rect key="frame" x="8" y="5" width="28" height="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" name="pink"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="transparentPink"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jbS-8k-pjN" secondAttribute="trailing" constant="8" id="9KV-d6-Myg"/>
+                            <constraint firstItem="jbS-8k-pjN" firstAttribute="top" secondItem="mev-yt-hCR" secondAttribute="top" constant="5" id="IOm-o5-B68"/>
+                            <constraint firstAttribute="bottom" secondItem="jbS-8k-pjN" secondAttribute="bottom" constant="5" id="aLr-pO-wtp"/>
+                            <constraint firstItem="jbS-8k-pjN" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="leading" constant="8" id="st1-Mr-lkR"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twP-GK-yb5">
+                        <rect key="frame" x="128" y="44" width="90" height="23"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rasion Project" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-Cb-AvM">
+                                <rect key="frame" x="8" y="5" width="74" height="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" name="purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="lightPurple"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="Bno-Z1-0Na"/>
+                            <constraint firstAttribute="bottom" secondItem="WxE-Cb-AvM" secondAttribute="bottom" constant="5" id="FeK-35-wHX"/>
+                            <constraint firstAttribute="trailing" secondItem="WxE-Cb-AvM" secondAttribute="trailing" constant="8" id="Lia-Pl-4uz"/>
+                            <constraint firstItem="WxE-Cb-AvM" firstAttribute="leading" secondItem="twP-GK-yb5" secondAttribute="leading" constant="8" id="b9c-kd-Btg"/>
+                            <constraint firstItem="WxE-Cb-AvM" firstAttribute="top" secondItem="twP-GK-yb5" secondAttribute="top" constant="5" id="ud8-ju-k0A"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" name="lightBackground"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="2cV-KX-ffj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="2ci-Vg-7V8"/>
                 <constraint firstItem="Z2l-gy-fL7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="2u8-cs-0LQ"/>
-                <constraint firstItem="ZNc-iU-Z4o" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="5ev-dZ-W3i"/>
+                <constraint firstItem="mev-yt-hCR" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="48n-FX-CaP"/>
                 <constraint firstItem="2cV-KX-ffj" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="6vb-Ld-nYW"/>
-                <constraint firstItem="ZNc-iU-Z4o" firstAttribute="top" secondItem="2cV-KX-ffj" secondAttribute="bottom" constant="9" id="C1K-s7-raY"/>
+                <constraint firstItem="mev-yt-hCR" firstAttribute="top" secondItem="2cV-KX-ffj" secondAttribute="bottom" constant="8" id="77x-82-pnh"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="trailing" constant="8" id="BDM-bU-uml"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="centerY" secondItem="mev-yt-hCR" secondAttribute="centerY" id="Bwo-57-kts"/>
                 <constraint firstItem="Z2l-gy-fL7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="EZJ-hL-Chk"/>
                 <constraint firstAttribute="trailing" secondItem="O07-Ha-YWj" secondAttribute="trailing" constant="16" id="FRI-vw-ca6"/>
-                <constraint firstItem="pPA-h9-KBl" firstAttribute="leading" secondItem="ZNc-iU-Z4o" secondAttribute="trailing" constant="8" id="Rna-Iv-2a8"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="bottom" secondItem="mev-yt-hCR" secondAttribute="bottom" id="JSU-q6-gya"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="128" id="MFc-Bg-nrt"/>
+                <constraint firstItem="O07-Ha-YWj" firstAttribute="leading" secondItem="twP-GK-yb5" secondAttribute="trailing" constant="85" id="Qtz-WH-CzQ"/>
                 <constraint firstItem="kjr-fz-qEg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="i2L-cW-RTd"/>
                 <constraint firstAttribute="trailing" secondItem="kjr-fz-qEg" secondAttribute="trailing" constant="16" id="kmM-y2-yyY"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="44" id="lAn-RU-CZE"/>
                 <constraint firstAttribute="bottom" secondItem="O07-Ha-YWj" secondAttribute="bottom" constant="16" id="mdx-PE-TiV"/>
-                <constraint firstAttribute="bottom" secondItem="pPA-h9-KBl" secondAttribute="bottom" constant="16" id="rHw-ne-70K"/>
+                <constraint firstAttribute="bottom" secondItem="twP-GK-yb5" secondAttribute="bottom" constant="17" id="msx-vv-McR"/>
             </constraints>
             <size key="customSize" width="317" height="139"/>
             <connections>
-                <outlet property="firstCategoryLabel" destination="ZNc-iU-Z4o" id="oGP-Rb-YA8"/>
+                <outlet property="mainCategoryLabel" destination="jbS-8k-pjN" id="AVi-PD-cht"/>
+                <outlet property="mainCategoryView" destination="mev-yt-hCR" id="JHn-XK-XMj"/>
                 <outlet property="playButton" destination="O07-Ha-YWj" id="tDu-hD-pf8"/>
-                <outlet property="secondCategoryLabel" destination="pPA-h9-KBl" id="y94-0C-y8t"/>
+                <outlet property="subCategoryLabel" destination="WxE-Cb-AvM" id="xoG-Im-Yai"/>
+                <outlet property="subCategoryView" destination="twP-GK-yb5" id="PpM-jA-DLw"/>
                 <outlet property="timeLabel" destination="kjr-fz-qEg" id="yDP-Ng-Mah"/>
                 <outlet property="titleLabel" destination="2cV-KX-ffj" id="1M0-2W-k6T"/>
             </connections>
-            <point key="canvasLocation" x="53" y="90"/>
+            <point key="canvasLocation" x="52.898550724637687" y="89.732142857142847"/>
         </collectionViewCell>
     </objects>
     <resources>
@@ -108,11 +133,14 @@
         <namedColor name="grey2">
             <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lightBackground">
-            <color red="0.98039215686274506" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="lightPurple">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pink">
             <color red="0.99215686274509807" green="0.35686274509803922" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.60784313725490191" green="0.31764705882352939" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="transparentPink">
             <color red="1" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

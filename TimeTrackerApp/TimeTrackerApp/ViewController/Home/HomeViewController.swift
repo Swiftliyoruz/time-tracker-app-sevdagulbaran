@@ -73,7 +73,6 @@ extension HomeViewController: HomeViewModelDelegate {
     func tabbarConfig(){
         guard let tabbar = self.tabBarController?.tabBar else { return }
         tabbar.tintColor = .blackBackground
-        tabbar.unselectedItemTintColor = .lightBackground
         tabbar.layer.cornerRadius = 30
     }
     
