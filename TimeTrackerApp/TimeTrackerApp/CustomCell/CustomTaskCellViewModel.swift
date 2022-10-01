@@ -7,8 +7,10 @@
 
 import Foundation
 
+
 protocol CustomTaskCellViewModelDelegate: AnyObject {
     func setupUI()
+ 
 }
 
 protocol CustomTaskCellViewModelInterface {
@@ -25,6 +27,7 @@ final class CustomTaskCellViewModel {
 extension CustomTaskCellViewModel: CustomTaskCellViewModelInterface {
     func viewDidLoad() {
         delegate?.setupUI()
+    
     }
     func playButtonTapped() {
         print("tapped")

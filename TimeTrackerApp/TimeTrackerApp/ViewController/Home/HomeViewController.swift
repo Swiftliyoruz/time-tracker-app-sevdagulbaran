@@ -23,6 +23,8 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var todayLabel: UILabel!
     
     private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
+    var taskList = [Task]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,12 @@ final class HomeViewController: UIViewController {
         viewModel.viewDidLoad()
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+
+        taskCollectionView.reloadData()
+    }
 }
+
 
 // MARK: - Actions
 
@@ -52,13 +59,15 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItemsInSection
+        taskList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
-        
+   
+        cell.configureCell(task: taskList[indexPath.row])
         return cell
+
     }
 }
 // MARK: - HomeViewModelDelegate

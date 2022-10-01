@@ -37,6 +37,8 @@
 		52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4828DF0847006879DF /* HomeViewModel.swift */; };
 		52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */; };
 		52D5CF4D28DF2D02006879DF /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */; };
+		52FC859028E8F81B0000F6CE /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */; };
+		52FC859128E8F81B0000F6CE /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		52D5CF4828DF0847006879DF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
 		52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 		527EE62428E268DE0005D268 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */,
+				52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -338,8 +344,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D5CF4D28DF2D02006879DF /* TaskViewModel.swift in Sources */,
+				52FC859028E8F81B0000F6CE /* Task+CoreDataClass.swift in Sources */,
 				52AF0BE628C672C700C14DB3 /* HomeViewController.swift in Sources */,
 				52A187B528E0E988006EDBC5 /* AddViewModel.swift in Sources */,
+				52FC859128E8F81B0000F6CE /* Task+CoreDataProperties.swift in Sources */,
 				52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */,
 				5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */,
 				527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */,

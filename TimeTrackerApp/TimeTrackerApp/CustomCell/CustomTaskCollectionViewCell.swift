@@ -16,13 +16,20 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var subCategoryLabel: UILabel!
     @IBOutlet private weak var mainCategoryView: UIView!
     @IBOutlet private weak var subCategoryView: UIView!
-    private lazy var viewModel: CustomTaskCellViewModelInterface = CustomTaskCellViewModel()
     
+    private lazy var viewModel: CustomTaskCellViewModelInterface = CustomTaskCellViewModel()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func awakeFromNib() {
         super.awakeFromNib()
         
         viewModel.delegate = self
         viewModel.viewDidLoad()
+    }
+    func configureCell(task: Task) {
+        titleLabel.text = task.taskTitle
+        mainCategoryLabel.text = task.mainCategory
+        subCategoryLabel.text = task.subCategory
+        
     }
 }
 
@@ -44,3 +51,4 @@ extension CustomTaskCollectionViewCell: CustomTaskCellViewModelDelegate {
     }
     
 }
+
