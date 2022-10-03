@@ -19,17 +19,18 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     
     private lazy var viewModel: CustomTaskCellViewModelInterface = CustomTaskCellViewModel()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         viewModel.delegate = self
         viewModel.viewDidLoad()
+        
     }
     func configureCell(task: Task) {
         titleLabel.text = task.taskTitle
         mainCategoryLabel.text = task.mainCategory
         subCategoryLabel.text = task.subCategory
-        
     }
 }
 

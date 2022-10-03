@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class HomeViewController: UIViewController {
     
@@ -23,6 +24,8 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var todayLabel: UILabel!
     
     private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var taskList = [Task]()
     
     
@@ -30,12 +33,25 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.viewDidLoad()
-        
+        fetchTasks()
     }
     override func viewDidAppear(_ animated: Bool) {
-
-        taskCollectionView.reloadData()
+//        taskCollectionView.reloadData()
     }
+    func fetchTasks() -> [Task]? {
+        let taskLists: NSFetchRequest<Task> = Task.fetchRequest()
+        
+        do {
+           taskList = try context.fetch(taskLists)
+            DispatchQueue.main.async {
+                self.taskCollectionView.reloadData()
+            }
+        } catch {
+            print("Fetch Tasks Error!!!")
+        }
+        return nil
+    }
+    
 }
 
 
@@ -64,8 +80,9 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
-   
-        cell.configureCell(task: taskList[indexPath.row])
+
+        let task = taskList[indexPath.row]
+        cell.configureCell(task: task )
         return cell
 
     }

@@ -31,7 +31,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Desing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cV-KX-ffj">
-                        <rect key="frame" x="76" y="16" width="70.5" height="20"/>
+                        <rect key="frame" x="76" y="16" width="70.5" height="19"/>
                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -55,10 +55,10 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mev-yt-hCR">
-                        <rect key="frame" x="76" y="44" width="44" height="23"/>
+                        <rect key="frame" x="76" y="43" width="44" height="24"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-8k-pjN">
-                                <rect key="frame" x="8" y="5" width="28" height="13"/>
+                                <rect key="frame" x="8" y="5" width="28" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" name="pink"/>
                                 <nil key="highlightedColor"/>
@@ -66,17 +66,17 @@
                         </subviews>
                         <color key="backgroundColor" name="transparentPink"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jbS-8k-pjN" secondAttribute="trailing" constant="8" id="9KV-d6-Myg"/>
+                            <constraint firstAttribute="trailing" secondItem="jbS-8k-pjN" secondAttribute="trailing" constant="8" id="C9z-1c-ffs"/>
                             <constraint firstItem="jbS-8k-pjN" firstAttribute="top" secondItem="mev-yt-hCR" secondAttribute="top" constant="5" id="IOm-o5-B68"/>
+                            <constraint firstItem="jbS-8k-pjN" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="leading" constant="8" id="TLh-r5-bUW"/>
                             <constraint firstAttribute="bottom" secondItem="jbS-8k-pjN" secondAttribute="bottom" constant="5" id="aLr-pO-wtp"/>
-                            <constraint firstItem="jbS-8k-pjN" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="leading" constant="8" id="st1-Mr-lkR"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twP-GK-yb5">
-                        <rect key="frame" x="128" y="44" width="90" height="23"/>
+                        <rect key="frame" x="128" y="44" width="85.5" height="23"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rasion Project" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-Cb-AvM">
-                                <rect key="frame" x="8" y="5" width="74" height="13"/>
+                                <rect key="frame" x="8" y="5" width="69.5" height="13"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" name="purple"/>
                                 <nil key="highlightedColor"/>
@@ -84,7 +84,6 @@
                         </subviews>
                         <color key="backgroundColor" name="lightPurple"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="23" id="Bno-Z1-0Na"/>
                             <constraint firstAttribute="bottom" secondItem="WxE-Cb-AvM" secondAttribute="bottom" constant="5" id="FeK-35-wHX"/>
                             <constraint firstAttribute="trailing" secondItem="WxE-Cb-AvM" secondAttribute="trailing" constant="8" id="Lia-Pl-4uz"/>
                             <constraint firstItem="WxE-Cb-AvM" firstAttribute="leading" secondItem="twP-GK-yb5" secondAttribute="leading" constant="8" id="b9c-kd-Btg"/>
@@ -97,17 +96,14 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="2cV-KX-ffj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="2ci-Vg-7V8"/>
+                <constraint firstItem="mev-yt-hCR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="43" id="2gq-WU-Bh8"/>
                 <constraint firstItem="Z2l-gy-fL7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="2u8-cs-0LQ"/>
                 <constraint firstItem="mev-yt-hCR" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="48n-FX-CaP"/>
                 <constraint firstItem="2cV-KX-ffj" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="6vb-Ld-nYW"/>
                 <constraint firstItem="mev-yt-hCR" firstAttribute="top" secondItem="2cV-KX-ffj" secondAttribute="bottom" constant="8" id="77x-82-pnh"/>
                 <constraint firstItem="twP-GK-yb5" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="trailing" constant="8" id="BDM-bU-uml"/>
-                <constraint firstItem="twP-GK-yb5" firstAttribute="centerY" secondItem="mev-yt-hCR" secondAttribute="centerY" id="Bwo-57-kts"/>
                 <constraint firstItem="Z2l-gy-fL7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="EZJ-hL-Chk"/>
                 <constraint firstAttribute="trailing" secondItem="O07-Ha-YWj" secondAttribute="trailing" constant="16" id="FRI-vw-ca6"/>
-                <constraint firstItem="twP-GK-yb5" firstAttribute="bottom" secondItem="mev-yt-hCR" secondAttribute="bottom" id="JSU-q6-gya"/>
-                <constraint firstItem="twP-GK-yb5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="128" id="MFc-Bg-nrt"/>
-                <constraint firstItem="O07-Ha-YWj" firstAttribute="leading" secondItem="twP-GK-yb5" secondAttribute="trailing" constant="85" id="Qtz-WH-CzQ"/>
                 <constraint firstItem="kjr-fz-qEg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="i2L-cW-RTd"/>
                 <constraint firstAttribute="trailing" secondItem="kjr-fz-qEg" secondAttribute="trailing" constant="16" id="kmM-y2-yyY"/>
                 <constraint firstItem="twP-GK-yb5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="44" id="lAn-RU-CZE"/>
@@ -140,7 +136,7 @@
             <color red="0.99215686274509807" green="0.35686274509803922" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="purple">
-            <color red="0.60784313725490191" green="0.31764705882352939" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.60799998044967651" green="0.31799998879432678" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="transparentPink">
             <color red="1" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
