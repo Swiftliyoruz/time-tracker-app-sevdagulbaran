@@ -10,6 +10,7 @@
 		5249702728D118F90060BACB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702628D118F90060BACB /* TaskViewController.swift */; };
 		5249702A28D119340060BACB /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702928D119340060BACB /* ReportViewController.swift */; };
 		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
+		52656F8D28EB872C00D9F152 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52656F8C28EB872C00D9F152 /* DataManipulation.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
 		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
 		527AFA3B28E75EC900C726CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AFA3A28E75EC900C726CB /* Constants.swift */; };
@@ -45,6 +46,7 @@
 		5249702628D118F90060BACB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		5249702928D119340060BACB /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
+		52656F8C28EB872C00D9F152 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		527AFA3A28E75EC900C726CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */,
 				52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */,
+				52656F8C28EB872C00D9F152 /* DataManipulation.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				5249702A28D119340060BACB /* ReportViewController.swift in Sources */,
 				52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */,
 				525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */,
+				52656F8D28EB872C00D9F152 /* DataManipulation.swift in Sources */,
 				52A187B328E0E976006EDBC5 /* AddViewController.swift in Sources */,
 				5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */,
 			);

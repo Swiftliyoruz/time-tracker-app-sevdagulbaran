@@ -25,7 +25,6 @@ final class HomeViewController: UIViewController {
     
     private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var taskList = [Task]()
     
     
@@ -33,25 +32,15 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.viewDidLoad()
-        fetchTasks()
-    }
-    override func viewDidAppear(_ animated: Bool) {
-//        taskCollectionView.reloadData()
-    }
-    func fetchTasks() -> [Task]? {
-        let taskLists: NSFetchRequest<Task> = Task.fetchRequest()
-        
-        do {
-           taskList = try context.fetch(taskLists)
-            DispatchQueue.main.async {
-                self.taskCollectionView.reloadData()
-            }
-        } catch {
-            print("Fetch Tasks Error!!!")
-        }
-        return nil
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+   
+        taskList = DataManipulation.shared.fetchTasks() ?? []
+        DispatchQueue.main.async {
+            self.taskCollectionView.reloadData()
+        }
+    }
 }
 
 
@@ -80,11 +69,11 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
-
+        
         let task = taskList[indexPath.row]
         cell.configureCell(task: task )
         return cell
-
+        
     }
 }
 // MARK: - HomeViewModelDelegate

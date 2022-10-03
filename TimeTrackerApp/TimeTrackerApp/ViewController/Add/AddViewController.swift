@@ -14,9 +14,10 @@ final class AddViewController: UIViewController {
     @IBOutlet private weak var selectMainCategoryButton: UIButton!
     @IBOutlet private weak var subCategoryTextField: UITextField!
     
+ 
     private lazy var viewModel: AddViewModelInterface = AddViewModel()
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate =  self
@@ -27,18 +28,11 @@ final class AddViewController: UIViewController {
 
 extension AddViewController {
     @IBAction func addButtonTapped(_ sender: Any) {
-        //viewModel.addButtonTapped()
-        let newTask = Task(context: self.context)
+        let newTask = Task(context: DataManipulation.context)
         newTask.taskTitle = taskTitleTextField.text
         newTask.mainCategory = selectMainCategoryButton.currentTitle
         newTask.subCategory = subCategoryTextField.text
-        
-        do {
-            try self.context.save()
-        }
-        catch {
-        }
-        print(newTask.self)
+        DataManipulation.shared.createTask(task: newTask)
     }
 }
 
