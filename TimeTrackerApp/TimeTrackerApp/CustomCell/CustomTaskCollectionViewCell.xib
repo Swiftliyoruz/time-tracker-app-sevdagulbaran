@@ -112,6 +112,7 @@
             </constraints>
             <size key="customSize" width="317" height="139"/>
             <connections>
+                <outlet property="iconImageView" destination="Z2l-gy-fL7" id="pQE-xp-mlP"/>
                 <outlet property="mainCategoryLabel" destination="jbS-8k-pjN" id="AVi-PD-cht"/>
                 <outlet property="mainCategoryView" destination="mev-yt-hCR" id="JHn-XK-XMj"/>
                 <outlet property="playButton" destination="O07-Ha-YWj" id="tDu-hD-pf8"/>

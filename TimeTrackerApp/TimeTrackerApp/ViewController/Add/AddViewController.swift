@@ -14,9 +14,8 @@ final class AddViewController: UIViewController {
     @IBOutlet private weak var selectMainCategoryButton: UIButton!
     @IBOutlet private weak var subCategoryTextField: UITextField!
     
- 
     private lazy var viewModel: AddViewModelInterface = AddViewModel()
-
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +24,7 @@ final class AddViewController: UIViewController {
     }
 }
 // MARK: - Actions
-
+//mvvm yap
 extension AddViewController {
     @IBAction func addButtonTapped(_ sender: Any) {
         let newTask = Task(context: DataManipulation.context)

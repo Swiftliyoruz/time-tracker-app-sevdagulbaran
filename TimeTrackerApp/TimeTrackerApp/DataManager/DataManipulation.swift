@@ -38,7 +38,7 @@ final class DataManipulation {
             let fetchedTask = try DataManipulation.context.fetch(fetchRequest) as! [Task]
             print(fetchedTask.count)
             
-            
+            return fetchedTask  
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }

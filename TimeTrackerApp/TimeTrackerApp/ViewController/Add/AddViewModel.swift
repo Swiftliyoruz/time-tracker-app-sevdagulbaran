@@ -33,6 +33,9 @@ extension AddViewModel: AddViewModelInterface {
     }
     
     func addButtonTapped() {
+        let newTask = Task(context: DataManipulation.context)
         
+        
+        DataManipulation.shared.createTask(task: newTask)
     }
 }

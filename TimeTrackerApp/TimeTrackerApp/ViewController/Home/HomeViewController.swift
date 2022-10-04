@@ -33,9 +33,7 @@ final class HomeViewController: UIViewController {
         viewModel.delegate = self
         viewModel.viewDidLoad()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
-   
         taskList = DataManipulation.shared.fetchTasks() ?? []
         DispatchQueue.main.async {
             self.taskCollectionView.reloadData()
