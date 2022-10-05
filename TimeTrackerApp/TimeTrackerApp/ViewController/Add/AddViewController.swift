@@ -70,6 +70,7 @@ extension AddViewController: AddViewModelDelegate {
     }
     func configureAddButton() {
         
+        if taskTitleTextField.text != "" && subCategoryTextField.text != ""  {
             let newTask = Task(context: DataManipulation.context)
             newTask.taskTitle = taskTitleTextField.text
             newTask.mainCategory = selectMainCategoryButton.currentTitle
@@ -78,10 +79,10 @@ extension AddViewController: AddViewModelDelegate {
             
             taskTitleTextField.text?.removeAll()
             subCategoryTextField.text?.removeAll()
-            self.tabBarController?.selectedIndex = 0
-  
             
-        
+            self.tabBarController?.selectedIndex = 0
+        }else {
+            CustomToast.show(message: "Fill in all the fields.", bgColor: .lightGray, textColor: .grey2, labelFont: .toastMessageFont, showIn: .bottom, controller: self)
+        }
     }
 }
-
