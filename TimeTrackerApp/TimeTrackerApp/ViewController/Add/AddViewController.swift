@@ -75,10 +75,13 @@ extension AddViewController: AddViewModelDelegate {
             newTask.taskTitle = taskTitleTextField.text
             newTask.mainCategory = selectMainCategoryButton.currentTitle
             newTask.subCategory = subCategoryTextField.text
+            newTask.taskIcon = selectImageButtton.currentImage?.jpegData(compressionQuality: 1.0)
+            
             DataManipulation.shared.createTask(task: newTask)
             
             taskTitleTextField.text?.removeAll()
             subCategoryTextField.text?.removeAll()
+        
             
             self.tabBarController?.selectedIndex = 0
         }else {

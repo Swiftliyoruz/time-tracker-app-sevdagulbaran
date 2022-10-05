@@ -31,7 +31,8 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
         titleLabel.text = task.taskTitle
         mainCategoryLabel.text = task.mainCategory
         subCategoryLabel.text = task.subCategory
-       // iconImageView.image = UIImage(data: task.taskIcon!)
+        guard let img = task.taskIcon else { return }
+        iconImageView.image =  UIImage(data: img)
     }
 }
 
