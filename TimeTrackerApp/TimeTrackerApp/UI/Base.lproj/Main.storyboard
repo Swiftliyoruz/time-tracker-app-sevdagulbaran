@@ -159,26 +159,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleCircle" translatesAutoresizingMaskIntoConstraints="NO" id="cEh-FT-kuK">
-                                <rect key="frame" x="138" y="183" width="16" height="16"/>
+                                <rect key="frame" x="138" y="139" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="59M-1Z-LbE"/>
                                     <constraint firstAttribute="height" constant="16" id="eTA-1U-Mfj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Desing" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hs-em-giv">
-                                <rect key="frame" x="166" y="183" width="70.666666666666686" height="19"/>
+                                <rect key="frame" x="166" y="139" width="70.666666666666686" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" name="grey2"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:32:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS6-6e-k2M">
-                                <rect key="frame" x="78" y="282" width="258" height="57"/>
+                                <rect key="frame" x="78" y="238" width="258" height="57"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r9-LI-i2V">
-                                <rect key="frame" x="40" y="707" width="334" height="56"/>
+                                <rect key="frame" x="40" y="756" width="334" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="NJc-wV-P9k"/>
                                 </constraints>
@@ -192,7 +192,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Be-RV-ijE">
-                                <rect key="frame" x="40" y="627" width="334" height="56"/>
+                                <rect key="frame" x="40" y="676" width="334" height="56"/>
                                 <color key="backgroundColor" name="lightPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="p6g-Pc-Thl"/>
@@ -328,7 +328,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addButtonTapped:" destination="Vuu-wt-iga" eventType="touchUpInside" id="Qz1-DI-der"/>
-                                    <segue destination="QgA-IL-lrp" kind="show" id="LY7-NY-0iB"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timepad v2" translatesAutoresizingMaskIntoConstraints="NO" id="kWb-Ss-Z77">

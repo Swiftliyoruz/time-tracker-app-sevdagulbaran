@@ -12,6 +12,7 @@ protocol AddViewModelDelegate: AnyObject {
     func setupUI()
     func configureActionSelectMainCategory()
     func configureActionSelectIcon()
+    func configureAddButton()
 }
 protocol AddViewModelInterface {
     var delegate: AddViewModelDelegate? { get set}
@@ -33,9 +34,6 @@ extension AddViewModel: AddViewModelInterface {
     }
     
     func addButtonTapped() {
-        let newTask = Task(context: DataManipulation.context)
-        
-        
-        DataManipulation.shared.createTask(task: newTask)
+        delegate?.configureAddButton()
     }
 }

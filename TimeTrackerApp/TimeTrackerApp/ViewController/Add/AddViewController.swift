@@ -16,7 +16,7 @@ final class AddViewController: UIViewController {
     
     private lazy var viewModel: AddViewModelInterface = AddViewModel()
     
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate =  self
@@ -24,14 +24,10 @@ final class AddViewController: UIViewController {
     }
 }
 // MARK: - Actions
-//mvvm yap
+
 extension AddViewController {
     @IBAction func addButtonTapped(_ sender: Any) {
-        let newTask = Task(context: DataManipulation.context)
-        newTask.taskTitle = taskTitleTextField.text
-        newTask.mainCategory = selectMainCategoryButton.currentTitle
-        newTask.subCategory = subCategoryTextField.text
-        DataManipulation.shared.createTask(task: newTask)
+        viewModel.addButtonTapped()
     }
 }
 
@@ -70,6 +66,21 @@ extension AddViewController: AddViewModelDelegate {
     }
     
     func setupUI() {
+        
+    }
+    func configureAddButton() {
+        
+            let newTask = Task(context: DataManipulation.context)
+            newTask.taskTitle = taskTitleTextField.text
+            newTask.mainCategory = selectMainCategoryButton.currentTitle
+            newTask.subCategory = subCategoryTextField.text
+            DataManipulation.shared.createTask(task: newTask)
+            
+            taskTitleTextField.text?.removeAll()
+            subCategoryTextField.text?.removeAll()
+            self.tabBarController?.selectedIndex = 0
+  
+            
         
     }
 }
