@@ -11,24 +11,22 @@ protocol HomeViewModelDelegate: AnyObject {
     func tabbarConfig()
     func setupUI()
     func registerCollectionView()
+    func reloadData()
 }
 
 protocol HomeViewModelInterface {
     var delegate: HomeViewModelDelegate? { get set}
     
     var numberOfItemsInSection: Int { get }
-    
+    var taskList: [Task] { get set }
     func viewDidLoad()
+    func viewDidAppear()
     func detailsButtonTapped()
     func moreButtonTapped()
     func seeAllButtonTapped()
 }
 
-private extension HomeViewModel {
-    enum Constant {
-        static let tableViewData = 10
-    }
-}
+
 
 final class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
@@ -36,13 +34,22 @@ final class HomeViewModel {
 
 extension HomeViewModel: HomeViewModelInterface {
     var numberOfItemsInSection: Int {
-        Constant.tableViewData
+        taskList.count
     }
-    
+    var taskList: [Task] {
+           get {
+               DataManipulation.shared.fetchTasks() ?? []
+           }
+           set {}
+       }
     func viewDidLoad() {
         delegate?.setupUI()
         delegate?.tabbarConfig()
         delegate?.registerCollectionView()
+        delegate?.reloadData()
+    }
+    func viewDidAppear() {
+ 
     }
     
     func detailsButtonTapped() {

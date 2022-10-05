@@ -25,19 +25,14 @@ final class HomeViewController: UIViewController {
     
     private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
     
-    var taskList = [Task]()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.viewDidLoad()
     }
     override func viewDidAppear(_ animated: Bool) {
-        taskList = DataManipulation.shared.fetchTasks() ?? []
-        DispatchQueue.main.async {
-            self.taskCollectionView.reloadData()
-        }
+        super.viewDidAppear(animated)
+        viewModel.viewDidAppear()
     }
 }
 
@@ -62,13 +57,13 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        taskList.count
+        viewModel.numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
         
-        let task = taskList[indexPath.row]
+        let task = viewModel.taskList[indexPath.row]
         cell.configureCell(task: task )
         return cell
         
@@ -77,13 +72,20 @@ extension HomeViewController: UICollectionViewDataSource {
 // MARK: - HomeViewModelDelegate
 
 extension HomeViewController: HomeViewModelDelegate {
+    func reloadData() {
+        viewModel.taskList = DataManipulation.shared.fetchTasks() ?? []
+        DispatchQueue.main.async {
+            self.taskCollectionView.reloadData()
+        }
+    }
+    
     func setupUI() {
         cardView.layer.masksToBounds = true
         cardView.layer.cornerRadius = 16
         cardView.layer.borderWidth = 0.3
     }
     
-    func tabbarConfig(){
+    func tabbarConfig() {
         guard let tabbar = self.tabBarController?.tabBar else { return }
         tabbar.tintColor = .blackBackground
         tabbar.layer.cornerRadius = 30
