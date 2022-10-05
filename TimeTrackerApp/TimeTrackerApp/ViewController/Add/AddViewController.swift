@@ -85,7 +85,7 @@ extension AddViewController: AddViewModelDelegate {
             
             self.tabBarController?.selectedIndex = 0
         }else {
-            CustomToast.show(message: "Fill in all the fields.", bgColor: .lightGray, textColor: .grey2, labelFont: .toastMessageFont, showIn: .bottom, controller: self)
+            CustomToastMessage.show(message: "Fill in all the fields.", bgColor: .lightGray, textColor: .grey2, labelFont: .toastMessageFont, showIn: .bottom, controller: self)
         }
     }
 }

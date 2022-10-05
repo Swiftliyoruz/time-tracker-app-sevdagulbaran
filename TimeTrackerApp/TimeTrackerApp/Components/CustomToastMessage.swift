@@ -1,5 +1,5 @@
 //
-//  CustomToast.swift
+//  CustomToastMessage.swift
 //  TimeTrackerApp
 //
 //  Created by Sevda Gul Baran on 5.10.2022.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomToast{
+class CustomToastMessage {
     
     enum Showin {
         case top

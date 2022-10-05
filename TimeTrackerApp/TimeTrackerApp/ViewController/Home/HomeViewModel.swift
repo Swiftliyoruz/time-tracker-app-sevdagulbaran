@@ -16,17 +16,15 @@ protocol HomeViewModelDelegate: AnyObject {
 
 protocol HomeViewModelInterface {
     var delegate: HomeViewModelDelegate? { get set}
-    
     var numberOfItemsInSection: Int { get }
     var taskList: [Task] { get set }
+    
     func viewDidLoad()
-    func viewDidAppear()
+    func viewWillAppear()
     func detailsButtonTapped()
     func moreButtonTapped()
     func seeAllButtonTapped()
 }
-
-
 
 final class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
@@ -46,10 +44,10 @@ extension HomeViewModel: HomeViewModelInterface {
         delegate?.setupUI()
         delegate?.tabbarConfig()
         delegate?.registerCollectionView()
-        delegate?.reloadData()
+        
     }
-    func viewDidAppear() {
- 
+    func viewWillAppear() {
+        delegate?.reloadData()
     }
     
     func detailsButtonTapped() {

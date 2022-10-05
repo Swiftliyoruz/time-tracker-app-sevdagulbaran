@@ -52,6 +52,5 @@ extension CustomTaskCollectionViewCell: CustomTaskCellViewModelDelegate {
         mainCategoryView.layer.cornerRadius = 6
         subCategoryView.layer.cornerRadius = 6
     }
-    
 }
 

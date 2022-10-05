@@ -36,13 +36,11 @@ final class DataManipulation {
         
         do {
             let fetchedTask = try DataManipulation.context.fetch(fetchRequest) as! [Task]
-            print(fetchedTask.count)
-            
-            return fetchedTask  
+             
+            return fetchedTask.reversed()
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
-        return nil
     }
     func updateTask(task: Task) {
         

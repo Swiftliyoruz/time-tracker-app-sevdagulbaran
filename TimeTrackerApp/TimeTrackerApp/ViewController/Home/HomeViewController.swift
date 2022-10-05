@@ -30,10 +30,11 @@ final class HomeViewController: UIViewController {
         viewModel.delegate = self
         viewModel.viewDidLoad()
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.viewDidAppear()
+        viewModel.viewWillAppear()
     }
+ 
 }
 
 
@@ -62,9 +63,9 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
-        
+
         let task = viewModel.taskList[indexPath.row]
-        cell.configureCell(task: task )
+        cell.configureCell(task: task)
         return cell
         
     }
@@ -74,9 +75,7 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: HomeViewModelDelegate {
     func reloadData() {
         viewModel.taskList = DataManipulation.shared.fetchTasks() ?? []
-        DispatchQueue.main.async {
-            self.taskCollectionView.reloadData()
-        }
+        taskCollectionView.reloadData()
     }
     
     func setupUI() {
