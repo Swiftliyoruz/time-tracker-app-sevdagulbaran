@@ -40,7 +40,7 @@ extension TaskViewController {
 
 extension TaskViewController: TaskViewModelDelegate {
     
-    func setupUI(){
+    func setupUI() {
         finishButton.layer.masksToBounds = true
         finishButton.layer.cornerRadius = 8
         quitButton.layer.masksToBounds = true

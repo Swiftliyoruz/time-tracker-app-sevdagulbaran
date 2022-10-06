@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol TaskViewModelDelegate: AnyObject {
     func setupUI()
 }

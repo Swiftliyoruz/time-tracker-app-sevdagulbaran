@@ -16,7 +16,6 @@ final class AddViewController: UIViewController {
     
     private lazy var viewModel: AddViewModelInterface = AddViewModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate =  self
@@ -42,17 +41,21 @@ extension AddViewController: AddViewModelDelegate {
         }
         selectImageButtton.menu = UIMenu(children: [
             UIAction(title: "Select Icon ", handler: taskIconClosure),
-            UIAction(title: Icons.TaskIconTitles.book, image: UIImage(named: Icons.TaskIconImages.book), handler: taskIconClosure),
+            UIAction(
+                title: Icons.TaskIconTitles.book,
+                image: UIImage(named: Icons.TaskIconImages.book),
+                handler: taskIconClosure
+            ),
             UIAction(title: Icons.TaskIconTitles.code, image: UIImage(named: Icons.TaskIconImages.code), handler: taskIconClosure),
             UIAction(title: Icons.TaskIconTitles.monitor, image: UIImage(named: Icons.TaskIconImages.monitor), handler: taskIconClosure),
-            UIAction(title: Icons.TaskIconTitles.sport, image: UIImage(named: Icons.TaskIconImages.sport), handler: taskIconClosure),
+            UIAction(title: Icons.TaskIconTitles.sport, image: UIImage(named: Icons.TaskIconImages.sport), handler: taskIconClosure)
         ])
         selectImageButtton.showsMenuAsPrimaryAction = true
         selectImageButtton.changesSelectionAsPrimaryAction = true
     }
     
     func configureActionSelectMainCategory() {
-        let mainCategoryClosure = {(action : UIAction ) in
+        let mainCategoryClosure = {(action: UIAction ) in
             print("Selected \(action.title)")
         }
         selectMainCategoryButton.menu = UIMenu(children: [
@@ -70,8 +73,9 @@ extension AddViewController: AddViewModelDelegate {
     }
     func configureAddButton() {
         
-        if taskTitleTextField.text != "" && subCategoryTextField.text != ""  {
-            let newTask = Task(context: DataManipulation.context)
+        if taskTitleTextField.text != "" && subCategoryTextField.text != "" {
+            guard let context = DataManipulation.context else { return }
+            let newTask = Task(context: context )
             newTask.taskTitle = taskTitleTextField.text
             newTask.mainCategory = selectMainCategoryButton.currentTitle
             newTask.subCategory = subCategoryTextField.text
@@ -81,10 +85,8 @@ extension AddViewController: AddViewModelDelegate {
             
             taskTitleTextField.text?.removeAll()
             subCategoryTextField.text?.removeAll()
-        
-            
             self.tabBarController?.selectedIndex = 0
-        }else {
+        } else {
             CustomToastMessage.show(message: "Fill in all the fields.", bgColor: .lightGray, textColor: .grey2, labelFont: .toastMessageFont, showIn: .bottom, controller: self)
         }
     }

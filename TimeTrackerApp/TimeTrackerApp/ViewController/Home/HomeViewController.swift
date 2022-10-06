@@ -34,10 +34,7 @@ final class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         viewModel.viewWillAppear()
     }
- 
 }
-
-
 // MARK: - Actions
 
 extension HomeViewController {
@@ -56,18 +53,16 @@ extension HomeViewController {
 // MARK: - UICollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.numberOfItemsInSection
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as! CustomTaskCollectionViewCell
-
+        guard let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as? CustomTaskCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         let task = viewModel.taskList[indexPath.row]
         cell.configureCell(task: task)
         return cell
-        
     }
 }
 // MARK: - HomeViewModelDelegate
@@ -77,21 +72,18 @@ extension HomeViewController: HomeViewModelDelegate {
         viewModel.taskList = DataManipulation.shared.fetchTasks() ?? []
         taskCollectionView.reloadData()
     }
-    
     func setupUI() {
         cardView.layer.masksToBounds = true
         cardView.layer.cornerRadius = 16
         cardView.layer.borderWidth = 0.3
     }
-    
     func tabbarConfig() {
         guard let tabbar = self.tabBarController?.tabBar else { return }
         tabbar.tintColor = .blackBackground
         tabbar.layer.cornerRadius = 30
     }
-    
     func registerCollectionView() {
         let nib = UINib(nibName: Constant.cellNibName, bundle: nil)
-        taskCollectionView.register(nib ,forCellWithReuseIdentifier: Constant.cellReusIdentifier)
+        taskCollectionView.register(nib, forCellWithReuseIdentifier: Constant.cellReusIdentifier)
     }
 }

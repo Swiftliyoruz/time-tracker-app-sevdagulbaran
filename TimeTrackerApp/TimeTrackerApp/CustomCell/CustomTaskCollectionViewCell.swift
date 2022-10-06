@@ -8,7 +8,6 @@
 import UIKit
 
 class CustomTaskCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var mainCategoryLabel: UILabel!
@@ -17,15 +16,12 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var mainCategoryView: UIView!
     @IBOutlet private weak var subCategoryView: UIView!
     @IBOutlet private weak var iconImageView: UIImageView!
-    
     private lazy var viewModel: CustomTaskCellViewModelInterface = CustomTaskCellViewModel()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     override func awakeFromNib() {
         super.awakeFromNib()
         viewModel.delegate = self
         viewModel.viewDidLoad()
-        
     }
     func configureCell(task: Task) {
         titleLabel.text = task.taskTitle
@@ -53,4 +49,3 @@ extension CustomTaskCollectionViewCell: CustomTaskCellViewModelDelegate {
         subCategoryView.layer.cornerRadius = 6
     }
 }
-

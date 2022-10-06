@@ -26,4 +26,3 @@ enum Icons {
         static let sport = "Icon Sport Circle"
     }
 }
-
