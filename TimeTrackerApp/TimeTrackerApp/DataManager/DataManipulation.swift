@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 final class DataManipulation {
-    
+
     static let shared = DataManipulation()
     
     static var context: NSManagedObjectContext? {
@@ -17,8 +17,7 @@ final class DataManipulation {
         return context
     }
     
-    private init() {
-    }
+    private init() {}
     
     func createTask(task: Task) {
         do {
@@ -37,6 +36,7 @@ final class DataManipulation {
             fatalError("Failed to fetch employees: \(error)")
         }
     }
+    
     func updateTask(task: Task) {
     }
     

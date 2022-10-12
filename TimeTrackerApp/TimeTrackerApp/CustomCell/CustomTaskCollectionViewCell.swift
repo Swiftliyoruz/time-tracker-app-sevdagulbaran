@@ -16,8 +16,11 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var mainCategoryView: UIView!
     @IBOutlet private weak var subCategoryView: UIView!
     @IBOutlet private weak var iconImageView: UIImageView!
+    
     private lazy var viewModel: CustomTaskCellViewModelInterface = CustomTaskCellViewModel()
+    
     var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         viewModel.delegate = self

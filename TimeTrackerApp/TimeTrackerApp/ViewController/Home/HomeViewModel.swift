@@ -7,15 +7,7 @@
 
 import Foundation
 
-protocol HomeViewModelDelegate: AnyObject {
-    func tabbarConfig()
-    func setupUI()
-    func registerCollectionView()
-    func reloadData()
-}
-
 protocol HomeViewModelInterface {
-    var delegate: HomeViewModelDelegate? { get set}
     var numberOfItemsInSection: Int { get }
     var taskList: [Task] { get set }
     
@@ -27,7 +19,11 @@ protocol HomeViewModelInterface {
 }
 
 final class HomeViewModel {
-    weak var delegate: HomeViewModelDelegate?
+    private weak var delegate: HomeViewModelDelegate?
+    
+    init (delegate: HomeViewModelDelegate) {
+        self.delegate = delegate
+    }
 }
 
 extension HomeViewModel: HomeViewModelInterface {
@@ -35,16 +31,15 @@ extension HomeViewModel: HomeViewModelInterface {
         taskList.count
     }
     var taskList: [Task] {
-           get {
-               DataManipulation.shared.fetchTasks() ?? []
-           }
-           set {}
-       }
+        get {
+            DataManipulation.shared.fetchTasks() ?? []
+        }
+        set {}
+    }
     func viewDidLoad() {
         delegate?.setupUI()
         delegate?.tabbarConfig()
         delegate?.registerCollectionView()
-        
     }
     func viewWillAppear() {
         delegate?.reloadData()

@@ -9,7 +9,6 @@ import Foundation
 
 protocol CustomTaskCellViewModelDelegate: AnyObject {
     func setupUI()
- 
 }
 
 protocol CustomTaskCellViewModelInterface {

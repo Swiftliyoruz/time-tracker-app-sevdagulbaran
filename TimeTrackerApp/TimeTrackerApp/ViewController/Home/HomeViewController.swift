@@ -8,6 +8,13 @@
 import UIKit
 import CoreData
 
+protocol HomeViewModelDelegate: AnyObject {
+    func tabbarConfig()
+    func setupUI()
+    func registerCollectionView()
+    func reloadData()
+}
+
 final class HomeViewController: UIViewController {
     
     private enum Constant {
@@ -23,11 +30,11 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var taskCollectionView: UICollectionView!
     @IBOutlet private weak var todayLabel: UILabel!
     
-    private lazy var viewModel: HomeViewModelInterface = HomeViewModel()
+    private lazy var viewModel: HomeViewModelInterface = HomeViewModel(delegate: self)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
         viewModel.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
