@@ -39,5 +39,4 @@ final class MockHomeVievController: HomeViewModelDelegate {
         invokedReloadData =  true
         invokedReloadDataCount += 1
     }
-    
 }

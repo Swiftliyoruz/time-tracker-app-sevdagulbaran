@@ -38,7 +38,7 @@ final class HomeViewModelTests: XCTestCase {
        
     }
     
-    func test_viewDidAppear_InvokesRequiredMethods() {
+    func test_viewWillAppear_InvokesRequiredMethods() {
         XCTAssertFalse(delegate.invokedReloadData)
         //- err
         //XCTAssertFalse(storeManager.invokedFetchTasks)
