@@ -13,6 +13,7 @@
 		5249702728D118F90060BACB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702628D118F90060BACB /* TaskViewController.swift */; };
 		5249702A28D119340060BACB /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702928D119340060BACB /* ReportViewController.swift */; };
 		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
+		5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260023F28FB5687004828E1 /* MockDataManipulation.swift */; };
 		52656F8D28EB872C00D9F152 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52656F8C28EB872C00D9F152 /* DataManipulation.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
 		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
@@ -64,6 +65,7 @@
 		5249702628D118F90060BACB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		5249702928D119340060BACB /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
+		5260023F28FB5687004828E1 /* MockDataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManipulation.swift; sourceTree = "<group>"; };
 		52656F8C28EB872C00D9F152 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				524081B728F76AE600BE54B6 /* Home */,
+				5260023F28FB5687004828E1 /* MockDataManipulation.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			files = (
 				524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */,
 				524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */,
+				5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */,
 				524081B928F76B0F00BE54B6 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

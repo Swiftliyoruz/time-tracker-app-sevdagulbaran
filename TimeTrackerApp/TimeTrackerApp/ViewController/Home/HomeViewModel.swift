@@ -20,9 +20,11 @@ protocol HomeViewModelInterface {
 
 final class HomeViewModel {
     private weak var delegate: HomeViewModelDelegate?
+    private let storeManager: DataManipulationInterface
     
-    init (delegate: HomeViewModelDelegate) {
+    init (delegate: HomeViewModelDelegate, storeManager: DataManipulationInterface = DataManipulation.shared) {
         self.delegate = delegate
+        self.storeManager = storeManager
     }
 }
 
@@ -32,7 +34,7 @@ extension HomeViewModel: HomeViewModelInterface {
     }
     var taskList: [Task] {
         get {
-            DataManipulation.shared.fetchTasks() ?? []
+            storeManager.fetchTasks() ?? []
         }
         set {}
     }

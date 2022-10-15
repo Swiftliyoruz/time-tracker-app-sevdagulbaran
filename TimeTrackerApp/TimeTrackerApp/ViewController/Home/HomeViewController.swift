@@ -31,7 +31,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var todayLabel: UILabel!
     
     private lazy var viewModel: HomeViewModelInterface = HomeViewModel(delegate: self)
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

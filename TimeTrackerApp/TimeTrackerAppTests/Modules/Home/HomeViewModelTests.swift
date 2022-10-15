@@ -11,12 +11,13 @@ import XCTest
 final class HomeViewModelTests: XCTestCase {
     private var viewModel: HomeViewModel!
     private var delegate: MockHomeVievController!
+    private var storeManager: MockDataManipulation!
    
     override func setUp() {
         super.setUp()
         delegate = .init()
-        
-        viewModel = .init(delegate: delegate)
+        storeManager = .init()
+        viewModel = .init(delegate: delegate, storeManager: storeManager)
         
     }
     override func tearDown() {
@@ -28,14 +29,23 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertFalse(delegate.invokedSetupUI)
         XCTAssertFalse(delegate.invokedRegisterCollectionView)
         XCTAssertFalse(delegate.invokedTabbarConfig)
-        XCTAssertFalse(delegate.invokedReloadData)
         
         viewModel.viewDidLoad()
 
         XCTAssertEqual(delegate.invokedSetupUICount, 1)
         XCTAssertEqual(delegate.invokedRegisterCollectionViewCount, 1)
         XCTAssertEqual(delegate.invokedTabbarConfigCount, 1)
-        // To-Do: Reloadda test hata verdi
+       
+    }
+    
+    func test_viewDidAppear_InvokesRequiredMethods() {
+        XCTAssertFalse(delegate.invokedReloadData)
+        //- err
+        //XCTAssertFalse(storeManager.invokedFetchTasks)
+        
+        viewModel.viewWillAppear()
+        
         XCTAssertEqual(delegate.invokedReloadDataCount, 1)
+        //XCTAssertEqual(storeManager.invokedCreateTaskCount, 1)
     }
 }

@@ -8,8 +8,15 @@
 import UIKit
 import CoreData
 
-final class DataManipulation {
 
+protocol DataManipulationInterface {
+    func createTask(task: Task)
+    func fetchTasks() -> [Task]?
+}
+
+
+final class DataManipulation: DataManipulationInterface {
+   
     static let shared = DataManipulation()
     
     static var context: NSManagedObjectContext? {
