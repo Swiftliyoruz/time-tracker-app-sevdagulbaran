@@ -8,27 +8,23 @@
 import UIKit
 import CoreData
 
-
 protocol DataManipulationInterface {
-    func createTask(task: Task)
+    func createTask()
     func fetchTasks() -> [Task]?
 }
 
-
 final class DataManipulation: DataManipulationInterface {
    
-    static let shared = DataManipulation()
-    
-    static var context: NSManagedObjectContext? {
+     var context: NSManagedObjectContext? {
         let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         return context
     }
     
-    private init() {}
+    init() {}
     
-    func createTask(task: Task) {
+    func createTask() {
         do {
-            try DataManipulation.context?.save()
+            try context?.save()
         } catch {
             print("Add Task Error")
         }
@@ -37,10 +33,10 @@ final class DataManipulation: DataManipulationInterface {
     func fetchTasks() -> [Task]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
         do {
-            let fetchedTask = try DataManipulation.context?.fetch(fetchRequest) as? [Task]
+            let fetchedTask = try context?.fetch(fetchRequest) as? [Task]
             return fetchedTask?.reversed()
         } catch {
-            fatalError("Failed to fetch employees: \(error)")
+            fatalError("Failed to fetch tasks: \(error)")
         }
     }
     

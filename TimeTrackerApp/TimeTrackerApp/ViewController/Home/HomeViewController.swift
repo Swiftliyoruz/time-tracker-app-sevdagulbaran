@@ -66,7 +66,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = taskCollectionView.dequeueReusableCell(withReuseIdentifier: Constant.cellReusIdentifier, for: indexPath) as? CustomTaskCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let task = viewModel.taskList[indexPath.row]
+        guard let task = viewModel.cellForItem(indexPath: indexPath) else { return cell }
         cell.configureCell(task: task)
         return cell
     }
@@ -75,7 +75,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: HomeViewModelDelegate {
     func reloadData() {
-        viewModel.taskList = DataManipulation.shared.fetchTasks() ?? []
         taskCollectionView.reloadData()
     }
     func setupUI() {
@@ -84,9 +83,8 @@ extension HomeViewController: HomeViewModelDelegate {
         cardView.layer.borderWidth = 0.3
     }
     func tabbarConfig() {
-        guard let tabbar = self.tabBarController?.tabBar else { return }
-        tabbar.tintColor = .blackBackground
-        tabbar.layer.cornerRadius = 30
+        tabBarController?.tabBar.tintColor = .blackBackground
+        tabBarController?.tabBar.layer.cornerRadius = 30
     }
     func registerCollectionView() {
         let nib = UINib(nibName: Constant.cellNibName, bundle: nil)

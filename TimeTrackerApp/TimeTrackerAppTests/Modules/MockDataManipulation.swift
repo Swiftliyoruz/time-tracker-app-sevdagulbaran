@@ -13,17 +13,18 @@ final class MockDataManipulation: DataManipulationInterface {
     var invokedCreateTask =  false
     var invokedCreateTaskCount = 0
     
-    func createTask(task: TimeTrackerApp.Task) {
+    func createTask() {
         invokedCreateTask = true
         invokedCreateTaskCount += 1
     }
     
     var invokedFetchTasks =  false
     var invokedFetchTasksCount = 0
+    var stubbedFetchTasks: [TimeTrackerApp.Task] = []
     
     func fetchTasks() -> [TimeTrackerApp.Task]? {
         invokedFetchTasks = true
         invokedFetchTasksCount += 1
-        return []
+        return stubbedFetchTasks
     }
 }

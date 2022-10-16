@@ -9,8 +9,8 @@ import Foundation
 
 protocol HomeViewModelInterface {
     var numberOfItemsInSection: Int { get }
-    var taskList: [Task] { get set }
     
+    func cellForItem(indexPath: IndexPath) -> Task?
     func viewDidLoad()
     func viewWillAppear()
     func detailsButtonTapped()
@@ -21,8 +21,9 @@ protocol HomeViewModelInterface {
 final class HomeViewModel {
     private weak var delegate: HomeViewModelDelegate?
     private let storeManager: DataManipulationInterface
+    private var taskList: [Task] = []
     
-    init (delegate: HomeViewModelDelegate, storeManager: DataManipulationInterface = DataManipulation.shared) {
+    init (delegate: HomeViewModelDelegate, storeManager: DataManipulationInterface = DataManipulation()) {
         self.delegate = delegate
         self.storeManager = storeManager
     }
@@ -32,19 +33,21 @@ extension HomeViewModel: HomeViewModelInterface {
     var numberOfItemsInSection: Int {
         taskList.count
     }
-    var taskList: [Task] {
-        get {
-            storeManager.fetchTasks() ?? []
-        }
-        set {}
-    }
+    
     func viewDidLoad() {
         delegate?.setupUI()
         delegate?.tabbarConfig()
         delegate?.registerCollectionView()
     }
     func viewWillAppear() {
+        taskList = storeManager.fetchTasks() ?? []
         delegate?.reloadData()
+    }
+    
+    func cellForItem(indexPath: IndexPath) -> Task? {
+        // safe subscript array on swift
+        // taskList[safe: indexPath.row]
+        taskList.count > indexPath.row ? taskList[indexPath.row] : nil
     }
     
     func detailsButtonTapped() {

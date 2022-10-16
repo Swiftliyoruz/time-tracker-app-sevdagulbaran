@@ -12,7 +12,7 @@ protocol CustomTaskCellViewModelDelegate: AnyObject {
 }
 
 protocol CustomTaskCellViewModelInterface {
-    var delegate: CustomTaskCellViewModelDelegate? { get set}
+    var delegate: CustomTaskCellViewModelDelegate? { get set }
     
     func viewDidLoad()
     func playButtonTapped()
@@ -25,8 +25,8 @@ final class CustomTaskCellViewModel {
 extension CustomTaskCellViewModel: CustomTaskCellViewModelInterface {
     func viewDidLoad() {
         delegate?.setupUI()
-    
     }
+    
     func playButtonTapped() {
         print("tapped")
     }

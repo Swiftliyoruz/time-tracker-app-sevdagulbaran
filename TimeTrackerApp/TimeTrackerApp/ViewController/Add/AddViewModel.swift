@@ -7,33 +7,40 @@
 
 import Foundation
 
-protocol AddViewModelDelegate: AnyObject {
-    
-    func setupUI()
-    func configureActionSelectMainCategory()
-    func configureActionSelectIcon()
-    func configureAddButton()
-}
 protocol AddViewModelInterface {
-    var delegate: AddViewModelDelegate? { get set}
+    var view: AddViewInterface? { get set }
     
     func viewDidLoad()
     func addButtonTapped()
 }
 
 final class AddViewModel {
-    weak var delegate: AddViewModelDelegate?
+    weak var view: AddViewInterface?
 }
 
 extension AddViewModel: AddViewModelInterface {
-    
     func viewDidLoad() {
-        delegate?.setupUI()
-        delegate?.configureActionSelectMainCategory()
-        delegate?.configureActionSelectIcon()
+        view?.configureActionSelectMainCategory()
+        view?.configureActionSelectIcon()
     }
     
     func addButtonTapped() {
-        delegate?.configureAddButton()
+        if let title = view?.titleText,
+            !title.isEmpty,
+           let subCategory = view?.subCategoryText,
+            !subCategory.isEmpty {
+            
+            guard let context = DataManipulation().context else { return }
+            let newTask = Task(context: context)
+            newTask.taskTitle = title
+            newTask.mainCategory = view?.selectedMainCategoryTitle
+            newTask.subCategory = subCategory
+            newTask.taskIcon = view?.seledtedImageButtonImageData
+            
+            DataManipulation().createTask()
+        } else {
+            
+            view?.showToast(message: "Fill in all the fields.")
+        }
     }
 }

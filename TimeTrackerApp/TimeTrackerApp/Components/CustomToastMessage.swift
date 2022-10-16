@@ -40,6 +40,7 @@ class CustomToastMessage {
         controller.view.addSubview(toastView)
         toastLabel.translatesAutoresizingMaskIntoConstraints = false
         toastView.translatesAutoresizingMaskIntoConstraints = false
+        
         let lblConstraint1 = NSLayoutConstraint(
             item: toastLabel,
             attribute: .leading,
@@ -47,6 +48,7 @@ class CustomToastMessage {
             toItem: toastView,
             attribute: .leading,
             multiplier: 1, constant: 10)
+        
         let lblConstraint2 = NSLayoutConstraint(
             item: toastLabel,
             attribute: .trailing,
@@ -55,6 +57,7 @@ class CustomToastMessage {
             attribute: .trailing,
             multiplier: 1,
             constant: -10)
+        
         let lblConstraint3 = NSLayoutConstraint(
             item: toastLabel,
             attribute: .bottom,
@@ -63,6 +66,7 @@ class CustomToastMessage {
             attribute: .bottom,
             multiplier: 1,
             constant: -10)
+        
         let lblConstraint4 = NSLayoutConstraint(
             item: toastLabel,
             attribute: .top,
@@ -71,7 +75,9 @@ class CustomToastMessage {
             attribute: .top,
             multiplier: 1,
             constant: 10)
+        
         toastView.addConstraints([lblConstraint1, lblConstraint2, lblConstraint3, lblConstraint4])
+        
         let toastViewOne = NSLayoutConstraint(
             item: toastView,
             attribute: .leading,

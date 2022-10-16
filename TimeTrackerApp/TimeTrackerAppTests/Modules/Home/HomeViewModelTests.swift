@@ -39,13 +39,49 @@ final class HomeViewModelTests: XCTestCase {
     }
     
     func test_viewWillAppear_InvokesRequiredMethods() {
+        // GIVEN
         XCTAssertFalse(delegate.invokedReloadData)
-        //- err
-        //XCTAssertFalse(storeManager.invokedFetchTasks)
+        XCTAssertFalse(storeManager.invokedFetchTasks)
+        XCTAssertEqual(viewModel.numberOfItemsInSection, 0)
         
+        // WHEN
+        viewModel.viewWillAppear()
+        
+        // THEN
+        XCTAssertEqual(delegate.invokedReloadDataCount, 1)
+        XCTAssertEqual(storeManager.invokedFetchTasksCount, 1)
+        XCTAssertEqual(viewModel.numberOfItemsInSection, 0)
+        XCTAssertEqual(viewModel.cellForItem(indexPath: .init(row: 0, section: 0)), nil)
+    }
+    
+    func test_viewWillAppear_With100_InvokesRequiredMethods() {
+        // GIVEN
+        XCTAssertFalse(delegate.invokedReloadData)
+        XCTAssertFalse(storeManager.invokedFetchTasks)
+        XCTAssertEqual(viewModel.numberOfItemsInSection, 0)
+        
+        // WHEN
+        viewModel.viewWillAppear()
+        
+        // THEN
+        XCTAssertEqual(delegate.invokedReloadDataCount, 1)
+        XCTAssertEqual(storeManager.invokedFetchTasksCount, 1)
+        XCTAssertEqual(viewModel.numberOfItemsInSection, 0)
+        XCTAssertEqual(viewModel.cellForItem(indexPath: .init(row: 100, section: 0)), nil)
+    }
+    
+    func test_viewWillAppear_WithTasks_InvokesRequiredMethods() {
+        XCTAssertFalse(delegate.invokedReloadData)
+        XCTAssertFalse(storeManager.invokedFetchTasks)
+        XCTAssertEqual(viewModel.numberOfItemsInSection, 0)
+        
+        let task = Task()
+        storeManager.stubbedFetchTasks = [task]
         viewModel.viewWillAppear()
         
         XCTAssertEqual(delegate.invokedReloadDataCount, 1)
-        //XCTAssertEqual(storeManager.invokedCreateTaskCount, 1)
+        XCTAssertEqual(storeManager.invokedFetchTasksCount, 1)
+        XCTAssertEqual(viewModel.numberOfItemsInSection, 1)
+        XCTAssertNotNil(viewModel.cellForItem(indexPath: .init(row: 0, section: 0)))
     }
 }

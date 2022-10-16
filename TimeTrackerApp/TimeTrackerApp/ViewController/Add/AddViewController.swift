@@ -7,8 +7,21 @@
 
 import UIKit
 
-final class AddViewController: UIViewController {
+protocol AddViewInterface: AnyObject {
+    var titleText: String? { get }
+    var subCategoryText: String? { get }
+    var selectedMainCategoryTitle: String? { get }
+    var seledtedImageButtonImageData: Data? { get }
     
+    func configureActionSelectMainCategory()
+    func configureActionSelectIcon()
+    func setTaskTitle(text: String)
+    func setSubCategoryTitle(text: String)
+    func setTabBarControllerSelectedIndex(_ index: Int)
+    func showToast(message: String)
+}
+
+final class AddViewController: UIViewController {
     @IBOutlet private weak var taskTitleTextField: UITextField!
     @IBOutlet private weak var selectImageButtton: UIButton!
     @IBOutlet private weak var selectMainCategoryButton: UIButton!
@@ -18,7 +31,7 @@ final class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate =  self
+        viewModel.view = self
         viewModel.viewDidLoad()
     }
 }
@@ -32,15 +45,43 @@ extension AddViewController {
 
 // MARK: - AddViewModelDelegate
 
-extension AddViewController: AddViewModelDelegate {
+extension AddViewController: AddViewInterface {
+    var titleText: String? {
+        taskTitleTextField.text
+    }
     
+    var subCategoryText: String? {
+        subCategoryTextField.text
+    }
+    
+    var selectedMainCategoryTitle: String? {
+        selectMainCategoryButton.currentTitle
+    }
+    
+    var seledtedImageButtonImageData: Data? {
+        selectImageButtton.currentImage?.jpegData(compressionQuality: 1.0)
+    }
+    
+    func setTaskTitle(text: String) {
+        taskTitleTextField.text = text
+    }
+    
+    func setSubCategoryTitle(text: String) {
+        subCategoryTextField.text = text
+    }
+    
+    func setTabBarControllerSelectedIndex(_ index: Int) {
+        tabBarController?.selectedIndex = index
+    }
+    
+ 
     func configureActionSelectIcon() {
         let taskIconClosure = { [self](action: UIAction) in
             self.selectImageButtton.setImage(action.image, for: .normal)
             print("Selected \(action.title)")
         }
         selectImageButtton.menu = UIMenu(children: [
-            UIAction(title: "Select Icon ", handler: taskIconClosure),
+            UIAction(title: "Select Icon", handler: taskIconClosure),
             UIAction(
                 title: Icons.TaskIconTitles.book,
                 image: UIImage(named: Icons.TaskIconImages.book),
@@ -63,31 +104,16 @@ extension AddViewController: AddViewModelDelegate {
             UIAction(title: MainCategories.personal, handler: mainCategoryClosure),
             UIAction(title: MainCategories.work, handler: mainCategoryClosure)
         ])
-        
         selectMainCategoryButton.showsMenuAsPrimaryAction = true
         selectMainCategoryButton.changesSelectionAsPrimaryAction = true
     }
-    
-    func setupUI() {
-        
-    }
-    func configureAddButton() {
-        
-        if taskTitleTextField.text != "" && subCategoryTextField.text != "" {
-            guard let context = DataManipulation.context else { return }
-            let newTask = Task(context: context )
-            newTask.taskTitle = taskTitleTextField.text
-            newTask.mainCategory = selectMainCategoryButton.currentTitle
-            newTask.subCategory = subCategoryTextField.text
-            newTask.taskIcon = selectImageButtton.currentImage?.jpegData(compressionQuality: 1.0)
-            
-            DataManipulation.shared.createTask(task: newTask)
-            
-            taskTitleTextField.text?.removeAll()
-            subCategoryTextField.text?.removeAll()
-            self.tabBarController?.selectedIndex = 0
-        } else {
-            CustomToastMessage.show(message: "Fill in all the fields.", bgColor: .lightGray, textColor: .grey2, labelFont: .toastMessageFont, showIn: .bottom, controller: self)
-        }
+
+    func showToast(message: String) {
+        CustomToastMessage.show(message: message,
+                                bgColor: .lightGray,
+                                textColor: .grey2,
+                                labelFont: .toastMessageFont,
+                                showIn: .bottom,
+                                controller: self)
     }
 }

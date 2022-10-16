@@ -11,7 +11,6 @@ enum MainCategories {
     static let work = "Work"
     static let personal = "Personal"
 }
-
 enum Icons {
     enum TaskIconTitles {
         static let book = " Book"

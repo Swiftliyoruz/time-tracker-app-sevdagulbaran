@@ -20,16 +20,18 @@ class CustomTaskCollectionViewCell: UICollectionViewCell {
     private lazy var viewModel: CustomTaskCellViewModelInterface = CustomTaskCellViewModel()
     
     var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-    
+ //fix
     override func awakeFromNib() {
         super.awakeFromNib()
         viewModel.delegate = self
         viewModel.viewDidLoad()
     }
+    //fix
     func configureCell(task: Task) {
         titleLabel.text = task.taskTitle
         mainCategoryLabel.text = task.mainCategory
         subCategoryLabel.text = task.subCategory
+        //vm
         guard let img = task.taskIcon else { return }
         iconImageView.image =  UIImage(data: img)
     }
