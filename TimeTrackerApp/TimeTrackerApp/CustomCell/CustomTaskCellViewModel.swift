@@ -7,24 +7,20 @@
 
 import Foundation
 
-protocol CustomTaskCellViewModelDelegate: AnyObject {
-    func setupUI()
-}
-
 protocol CustomTaskCellViewModelInterface {
-    var delegate: CustomTaskCellViewModelDelegate? { get set }
+    var view: CustomTaskCellInterface? { get set }
     
-    func viewDidLoad()
+    func awakeFromNib()
     func playButtonTapped()
 }
 
 final class CustomTaskCellViewModel {
-    weak var delegate: CustomTaskCellViewModelDelegate?
+    weak var view: CustomTaskCellInterface?
 }
 
 extension CustomTaskCellViewModel: CustomTaskCellViewModelInterface {
-    func viewDidLoad() {
-        delegate?.setupUI()
+    func awakeFromNib() {
+        view?.setupUI()
     }
     
     func playButtonTapped() {

@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-protocol HomeViewModelDelegate: AnyObject {
+protocol HomeViewInterface: AnyObject {
     func tabbarConfig()
     func setupUI()
     func registerCollectionView()
@@ -30,7 +30,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var taskCollectionView: UICollectionView!
     @IBOutlet private weak var todayLabel: UILabel!
     
-    private lazy var viewModel: HomeViewModelInterface = HomeViewModel(delegate: self)
+    private lazy var viewModel: HomeViewModelInterface = HomeViewModel(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,25 +67,32 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         guard let task = viewModel.cellForItem(indexPath: indexPath) else { return cell }
-        cell.configureCell(task: task)
+        
+        cell.setTaskTitle(taskTitleText: task)
+        cell.setMainCategory(mainCategoryText: task)
+        cell.setSubCategory(subCategoryText: task)
+        cell.setTaskIcon(taskIconImage: task)
         return cell
     }
 }
 // MARK: - HomeViewModelDelegate
 
-extension HomeViewController: HomeViewModelDelegate {
+extension HomeViewController: HomeViewInterface {
     func reloadData() {
         taskCollectionView.reloadData()
     }
+    
     func setupUI() {
         cardView.layer.masksToBounds = true
         cardView.layer.cornerRadius = 16
         cardView.layer.borderWidth = 0.3
     }
+    
     func tabbarConfig() {
         tabBarController?.tabBar.tintColor = .blackBackground
         tabBarController?.tabBar.layer.cornerRadius = 30
     }
+    
     func registerCollectionView() {
         let nib = UINib(nibName: Constant.cellNibName, bundle: nil)
         taskCollectionView.register(nib, forCellWithReuseIdentifier: Constant.cellReusIdentifier)
