@@ -17,7 +17,7 @@ final class HomeViewModelTests: XCTestCase {
         super.setUp()
         delegate = .init()
         storeManager = .init()
-        viewModel = .init(delegate: delegate, storeManager: storeManager)
+        viewModel = .init(view: delegate, storeManager: storeManager)
         
     }
     override func tearDown() {

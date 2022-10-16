@@ -19,12 +19,12 @@ protocol HomeViewModelInterface {
 }
 
 final class HomeViewModel {
-    private weak var delegate: HomeViewModelDelegate?
+    private weak var view: HomeViewInterface?
     private let storeManager: DataManipulationInterface
     private var taskList: [Task] = []
     
-    init (delegate: HomeViewModelDelegate, storeManager: DataManipulationInterface = DataManipulation()) {
-        self.delegate = delegate
+    init (view: HomeViewInterface, storeManager: DataManipulationInterface = DataManipulation()) {
+        self.view = view
         self.storeManager = storeManager
     }
 }
@@ -35,13 +35,14 @@ extension HomeViewModel: HomeViewModelInterface {
     }
     
     func viewDidLoad() {
-        delegate?.setupUI()
-        delegate?.tabbarConfig()
-        delegate?.registerCollectionView()
+        view?.setupUI()
+        view?.tabbarConfig()
+        view?.registerCollectionView()
     }
+    
     func viewWillAppear() {
         taskList = storeManager.fetchTasks() ?? []
-        delegate?.reloadData()
+        view?.reloadData()
     }
     
     func cellForItem(indexPath: IndexPath) -> Task? {

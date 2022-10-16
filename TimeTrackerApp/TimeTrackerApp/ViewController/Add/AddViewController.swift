@@ -11,7 +11,7 @@ protocol AddViewInterface: AnyObject {
     var titleText: String? { get }
     var subCategoryText: String? { get }
     var selectedMainCategoryTitle: String? { get }
-    var seledtedImageButtonImageData: Data? { get }
+    var selectedImageButtonImageData: Data? { get }
     
     func configureActionSelectMainCategory()
     func configureActionSelectIcon()
@@ -58,7 +58,7 @@ extension AddViewController: AddViewInterface {
         selectMainCategoryButton.currentTitle
     }
     
-    var seledtedImageButtonImageData: Data? {
+    var selectedImageButtonImageData: Data? {
         selectImageButtton.currentImage?.jpegData(compressionQuality: 1.0)
     }
     
@@ -74,7 +74,6 @@ extension AddViewController: AddViewInterface {
         tabBarController?.selectedIndex = index
     }
     
- 
     func configureActionSelectIcon() {
         let taskIconClosure = { [self](action: UIAction) in
             self.selectImageButtton.setImage(action.image, for: .normal)
@@ -107,7 +106,7 @@ extension AddViewController: AddViewInterface {
         selectMainCategoryButton.showsMenuAsPrimaryAction = true
         selectMainCategoryButton.changesSelectionAsPrimaryAction = true
     }
-
+    
     func showToast(message: String) {
         CustomToastMessage.show(message: message,
                                 bgColor: .lightGray,

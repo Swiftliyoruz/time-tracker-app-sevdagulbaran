@@ -7,7 +7,7 @@
 
 @testable import TimeTrackerApp
 
-final class MockHomeVievController: HomeViewModelDelegate {
+final class MockHomeVievController: HomeViewInterface {
 
     var invokedTabbarConfig =  false
     var invokedTabbarConfigCount = 0

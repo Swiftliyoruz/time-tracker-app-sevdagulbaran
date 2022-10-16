@@ -18,6 +18,7 @@ final class ReportViewController: UIViewController {
     @IBOutlet private weak var dayWeekSegmented: UISegmentedControl!
     
     private lazy var viewModel: ReportViewModelInterface = ReportViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self

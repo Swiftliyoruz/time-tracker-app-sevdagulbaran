@@ -35,11 +35,10 @@ extension AddViewModel: AddViewModelInterface {
             newTask.taskTitle = title
             newTask.mainCategory = view?.selectedMainCategoryTitle
             newTask.subCategory = subCategory
-            newTask.taskIcon = view?.seledtedImageButtonImageData
+            newTask.taskIcon = view?.selectedImageButtonImageData
             
             DataManipulation().createTask()
         } else {
-            
             view?.showToast(message: "Fill in all the fields.")
         }
     }
