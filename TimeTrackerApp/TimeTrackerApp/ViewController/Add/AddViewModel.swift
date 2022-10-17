@@ -8,14 +8,19 @@
 import Foundation
 
 protocol AddViewModelInterface {
-    var view: AddViewInterface? { get set }
     
     func viewDidLoad()
     func addButtonTapped()
 }
 
 final class AddViewModel {
-    weak var view: AddViewInterface?
+    private weak var view: AddViewInterface?
+    private let storeManager: DataManipulationInterface
+    
+    init (view: AddViewInterface, storeManager: DataManipulationInterface = DataManipulation()) {
+        self.view = view
+        self.storeManager = storeManager
+    }
 }
 
 extension AddViewModel: AddViewModelInterface {
@@ -26,9 +31,9 @@ extension AddViewModel: AddViewModelInterface {
     
     func addButtonTapped() {
         if let title = view?.titleText,
-            !title.isEmpty,
+           !title.isEmpty,
            let subCategory = view?.subCategoryText,
-            !subCategory.isEmpty {
+           !subCategory.isEmpty {
             
             guard let context = DataManipulation().context else { return }
             let newTask = Task(context: context)

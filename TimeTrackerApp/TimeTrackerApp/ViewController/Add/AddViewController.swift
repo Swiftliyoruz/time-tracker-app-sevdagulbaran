@@ -27,11 +27,10 @@ final class AddViewController: UIViewController {
     @IBOutlet private weak var selectMainCategoryButton: UIButton!
     @IBOutlet private weak var subCategoryTextField: UITextField!
     
-    private lazy var viewModel: AddViewModelInterface = AddViewModel()
+    private lazy var viewModel: AddViewModelInterface = AddViewModel(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.view = self
         viewModel.viewDidLoad()
     }
 }
