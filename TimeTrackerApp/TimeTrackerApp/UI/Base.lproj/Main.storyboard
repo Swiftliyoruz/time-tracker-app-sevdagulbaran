@@ -127,7 +127,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Task" id="683-oW-7ow">
-                        <barButtonItem key="rightBarButtonItem" image="more" id="z33-Sd-y11">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="more" id="z33-Sd-y11">
                             <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                             <color key="tintColor" name="black"/>
                             <connections>
@@ -139,6 +139,7 @@
                     <connections>
                         <outlet property="cardView" destination="C89-vt-Akq" id="uMb-ML-AUF"/>
                         <outlet property="detailsButton" destination="Sga-4p-2sd" id="IYU-cX-IW6"/>
+                        <outlet property="moreButton" destination="z33-Sd-y11" id="KYE-Ex-aeH"/>
                         <outlet property="seeAllButton" destination="8Ea-ZN-QVW" id="Yad-bf-JdN"/>
                         <outlet property="taskCollectionView" destination="lWH-3r-5f4" id="8gh-5C-7NR"/>
                         <outlet property="timeLabel" destination="Vbj-1x-tcl" id="Oq9-ua-5Mo"/>

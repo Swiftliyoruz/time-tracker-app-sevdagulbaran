@@ -13,6 +13,11 @@ protocol HomeViewInterface: AnyObject {
     func setupUI()
     func registerCollectionView()
     func reloadData()
+    func moreButtonTapped()
+}
+private enum MoreButtonItem {
+    static let delete = "Delete.."
+    static let update = "Update.."
 }
 
 final class HomeViewController: UIViewController {
@@ -29,12 +34,14 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var seeAllButton: UIButton!
     @IBOutlet private weak var taskCollectionView: UICollectionView!
     @IBOutlet private weak var todayLabel: UILabel!
+    @IBOutlet private weak var moreButton: UIBarButtonItem!
     
     private lazy var viewModel: HomeViewModelInterface = HomeViewModel(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -48,9 +55,7 @@ extension HomeViewController {
     @IBAction func detailsButtonTapped(_ sender: Any) {
         viewModel.detailsButtonTapped()
     }
-    @IBAction func moreButtonTapped(_ sender: Any) {
-        viewModel.moreButtonTapped()
-    }
+    
     @IBAction func seeAllButtonTapped(_ sender: Any) {
         viewModel.seeAllButtonTapped()
     }
@@ -97,4 +102,20 @@ extension HomeViewController: HomeViewInterface {
         let nib = UINib(nibName: Constant.cellNibName, bundle: nil)
         taskCollectionView.register(nib, forCellWithReuseIdentifier: Constant.cellReusIdentifier)
     }
+    func moreButtonTapped() {
+       var menuItems: [UIAction] {
+           return [
+            UIAction(title: MoreButtonItem.update, image: UIImage(systemName: "repeat"), handler: { (_) in
+               }),
+               UIAction(title: MoreButtonItem.delete, image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
+               })
+           ]
+       }
+       var demoMenu: UIMenu {
+            UIMenu(image: nil, identifier: nil, options: [], children: menuItems)
+       }
+        let moreButton =  UIBarButtonItem(image: UIImage(named: "more"), primaryAction: nil, menu: demoMenu)
+        navigationItem.rightBarButtonItem = moreButton
+        moreButton.tintColor = .blackBackground
+   }
 }

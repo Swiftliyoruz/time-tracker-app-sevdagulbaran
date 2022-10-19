@@ -14,7 +14,6 @@ protocol HomeViewModelInterface {
     func viewDidLoad()
     func viewWillAppear()
     func detailsButtonTapped()
-    func moreButtonTapped()
     func seeAllButtonTapped()
 }
 
@@ -38,6 +37,7 @@ extension HomeViewModel: HomeViewModelInterface {
         view?.setupUI()
         view?.tabbarConfig()
         view?.registerCollectionView()
+        view?.moreButtonTapped()
     }
     
     func viewWillAppear() {
@@ -54,11 +54,6 @@ extension HomeViewModel: HomeViewModelInterface {
     func detailsButtonTapped() {
         print("tapped")
     }
-    
-    func moreButtonTapped() {
-        print("tapped")
-    }
-    
     func seeAllButtonTapped() {
         print("tapped")
     }
