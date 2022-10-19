@@ -43,6 +43,8 @@ extension AddViewModel: AddViewModelInterface {
             newTask.taskIcon = view?.selectedImageButtonImageData
             
             DataManipulation().createTask()
+            view?.setTabBarControllerSelectedIndex(0)
+        
         } else {
             view?.showToast(message: "Fill in all the fields.")
         }
