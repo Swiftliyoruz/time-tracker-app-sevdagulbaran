@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwipeCellKit
 
 protocol CustomTaskCellInterface: AnyObject {
     func setTaskTitle(taskTitleText: Task)
@@ -14,7 +15,7 @@ protocol CustomTaskCellInterface: AnyObject {
     func setTaskIcon(taskIconImage: Task)
     func setupUI()
 }
-class CustomTaskCollectionViewCell: UICollectionViewCell {
+class CustomTaskCollectionViewCell: SwipeCollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var mainCategoryLabel: UILabel!

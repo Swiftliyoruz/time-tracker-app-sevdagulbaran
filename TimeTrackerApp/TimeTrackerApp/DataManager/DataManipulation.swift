@@ -14,8 +14,8 @@ protocol DataManipulationInterface {
 }
 
 final class DataManipulation: DataManipulationInterface {
-   
-     var context: NSManagedObjectContext? {
+    
+    var context: NSManagedObjectContext? {
         let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         return context
     }
@@ -40,9 +40,8 @@ final class DataManipulation: DataManipulationInterface {
         }
     }
     
-    func updateTask(task: Task) {
-    }
-    
     func deleteTask(task: Task) {
+        context?.delete(task)
+        try? context?.save()
     }
 }
