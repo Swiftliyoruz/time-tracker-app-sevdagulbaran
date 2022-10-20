@@ -9,7 +9,6 @@ import Foundation
 
 protocol HomeViewModelInterface {
     var numberOfItemsInSection: Int { get }
-    var taskList: [Task] { get  set}
     
     func cellForItem(indexPath: IndexPath) -> Task?
     func viewDidLoad()
@@ -22,7 +21,7 @@ protocol HomeViewModelInterface {
 final class HomeViewModel {
     private weak var view: HomeViewInterface?
     private let storeManager: DataManipulationInterface
-    // var taskList: [Task] = []
+    var taskList: [Task] = []
     
     init (view: HomeViewInterface, storeManager: DataManipulationInterface = DataManipulation()) {
         self.view = view
@@ -32,14 +31,6 @@ final class HomeViewModel {
 
 extension HomeViewModel: HomeViewModelInterface {
     
-    var taskList: [Task] {
-        get {
-            storeManager.fetchTasks()  ?? []
-        }
-        set {
-            
-        }
-    }
     var numberOfItemsInSection: Int {
         taskList.count
     }
@@ -52,6 +43,7 @@ extension HomeViewModel: HomeViewModelInterface {
     }
     
     func viewWillAppear() {
+        taskList = storeManager.fetchTasks() ?? []
         view?.reloadData()
     }
     
@@ -61,10 +53,7 @@ extension HomeViewModel: HomeViewModelInterface {
     
     func deleteCell(indexPath: IndexPath) {
         DataManipulation().deleteTask(task: self.taskList[indexPath.row])
-        guard let taskList = DataManipulation().fetchTasks() else { return }
-        self.taskList = taskList
-        view?.deleteItems(indexPath: indexPath)
-        view?.reloadData()
+        taskList.remove(at: indexPath.row)
     }
     
     func detailsButtonTapped() {

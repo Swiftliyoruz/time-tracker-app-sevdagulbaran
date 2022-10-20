@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522CA72A2900A0000024A702 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 522CA7292900A0000024A702 /* SwipeCellKit */; };
+		5232201E29005CB20002AB32 /* DataManipulationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232201D29005CB20002AB32 /* DataManipulationTest.swift */; };
 		524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */; };
 		524081B928F76B0F00BE54B6 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */; };
 		524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081BA28F7717600BE54B6 /* MockHomeVievController.swift */; };
@@ -60,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5232201D29005CB20002AB32 /* DataManipulationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulationTest.swift; sourceTree = "<group>"; };
 		524081AC28F76A8700BE54B6 /* TimeTrackerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTrackerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerAppTests.swift; sourceTree = "<group>"; };
 		524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -117,12 +120,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522CA72A2900A0000024A702 /* SwipeCellKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5232201C29005C8C0002AB32 /* DataManipulation */ = {
+			isa = PBXGroup;
+			children = (
+				5232201D29005CB20002AB32 /* DataManipulationTest.swift */,
+			);
+			path = DataManipulation;
+			sourceTree = "<group>";
+		};
 		524081AD28F76A8700BE54B6 /* TimeTrackerAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,7 @@
 		524081B628F76ADE00BE54B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5232201C29005C8C0002AB32 /* DataManipulation */,
 				52660D1028FC7B3200A14636 /* Add */,
 				524081B728F76AE600BE54B6 /* Home */,
 				5260023F28FB5687004828E1 /* MockDataManipulation.swift */,
@@ -376,6 +389,7 @@
 			);
 			name = TimeTrackerApp;
 			packageProductDependencies = (
+				522CA7292900A0000024A702 /* SwipeCellKit */,
 			);
 			productName = TimeTrackerApp;
 			productReference = 52AF0BDE28C672C700C14DB3 /* TimeTrackerApp.app */;
@@ -410,6 +424,7 @@
 			);
 			mainGroup = 52AF0BD528C672C700C14DB3;
 			packageReferences = (
+				522CA7282900A0000024A702 /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
 			);
 			productRefGroup = 52AF0BDF28C672C700C14DB3 /* Products */;
 			projectDirPath = "";
@@ -478,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52660D1428FC7B7100A14636 /* MockAddViewController.swift in Sources */,
+				5232201E29005CB20002AB32 /* DataManipulationTest.swift in Sources */,
 				524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */,
 				524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */,
 				5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */,
@@ -784,6 +800,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		522CA7282900A0000024A702 /* XCRemoteSwiftPackageReference "SwipeCellKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwipeCellKit/SwipeCellKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		522CA7292900A0000024A702 /* SwipeCellKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 522CA7282900A0000024A702 /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
+			productName = SwipeCellKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		527EE62128E267310005D268 /* TaskModel.xcdatamodeld */ = {

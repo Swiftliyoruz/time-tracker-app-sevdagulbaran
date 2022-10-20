@@ -15,7 +15,7 @@ protocol HomeViewInterface: AnyObject {
     func registerCollectionView()
     func reloadData()
     func moreButtonTapped()
-    func deleteItems(indexPath: IndexPath)
+
 }
 private enum MoreButtonItem {
     static let delete = "Delete.."
@@ -84,7 +84,6 @@ extension HomeViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
 }
 
 extension HomeViewController: SwipeCollectionViewCellDelegate {
@@ -93,7 +92,7 @@ extension HomeViewController: SwipeCollectionViewCellDelegate {
         guard orientation == .right else { return nil }
         
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            self.deleteCell(indexPath: indexPath)
+            self.viewModel.deleteCell(indexPath: indexPath)
             action.fulfill(with: .delete)
         }
         deleteAction.image = UIImage(named: "delete")
@@ -109,11 +108,7 @@ extension HomeViewController: SwipeCollectionViewCellDelegate {
 // MARK: - HomeViewModelDelegate
 
 extension HomeViewController: HomeViewInterface {
-    func deleteItems(indexPath: IndexPath) {
-        self.taskCollectionView.deleteItems(at: [indexPath])
-        self.viewModel.taskList.remove(at: indexPath.row)
-    }
-    
+  
     func deleteCell(indexPath: IndexPath) {
         viewModel.deleteCell(indexPath: indexPath)
     }
