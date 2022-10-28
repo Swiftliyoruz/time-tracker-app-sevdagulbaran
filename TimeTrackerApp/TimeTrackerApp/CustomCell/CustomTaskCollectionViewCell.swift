@@ -15,7 +15,7 @@ protocol CustomTaskCellInterface: AnyObject {
     func setTaskIcon(taskIconImage: Task)
     func setupUI()
 }
-class CustomTaskCollectionViewCell: SwipeCollectionViewCell {
+final class CustomTaskCollectionViewCell: SwipeCollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var mainCategoryLabel: UILabel!

@@ -15,7 +15,6 @@ protocol HomeViewInterface: AnyObject {
     func registerCollectionView()
     func reloadData()
     func moreButtonTapped()
-
 }
 private enum MoreButtonItem {
     static let delete = "Delete.."
@@ -43,7 +42,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
-        
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -108,11 +107,7 @@ extension HomeViewController: SwipeCollectionViewCellDelegate {
 // MARK: - HomeViewModelDelegate
 
 extension HomeViewController: HomeViewInterface {
-  
-    func deleteCell(indexPath: IndexPath) {
-        viewModel.deleteCell(indexPath: indexPath)
-    }
-    
+
     func reloadData() {
         taskCollectionView.reloadData()
     }

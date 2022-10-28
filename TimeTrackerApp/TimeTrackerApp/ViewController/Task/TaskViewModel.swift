@@ -7,12 +7,8 @@
 
 import Foundation
 
-protocol TaskViewModelDelegate: AnyObject {
-    func setupUI()
-}
-
 protocol TaskViewModelInterface {
-    var delegate: TaskViewModelDelegate? { get set}
+    var view: TaskViewInterface? { get set}
     
     func viewDidLoad()
     func finishButtonTapped()
@@ -20,16 +16,21 @@ protocol TaskViewModelInterface {
 }
 
 final class TaskViewModel {
-    weak var delegate: TaskViewModelDelegate?
+    weak var view: TaskViewInterface?
+     
+    var timer: Timer = Timer()
+    var count: Int = 0
+    var timerCounting: Bool = false
+
 }
 
 extension TaskViewModel: TaskViewModelInterface {
     func viewDidLoad() {
-        delegate?.setupUI()
+        view?.setupUI()
     }
     
     func finishButtonTapped() {
-        print("tapped")
+    
     }
     
     func quitButtonTapped() {
