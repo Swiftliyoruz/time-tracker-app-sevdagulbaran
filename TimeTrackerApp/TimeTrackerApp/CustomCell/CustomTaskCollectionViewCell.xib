@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomTaskCollectionViewCell" reuseIdentifier="CustomTaskCollectionViewCell" id="gTV-IL-0wX" customClass="CustomTaskCollectionViewCell" customModule="TimeTrackerApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="84"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon Monitor Circle" translatesAutoresizingMaskIntoConstraints="NO" id="Z2l-gy-fL7">
+                        <rect key="frame" x="16" y="16" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="cxX-tu-tH1"/>
+                            <constraint firstAttribute="width" constant="44" id="kKq-gF-OJ6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Desing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cV-KX-ffj">
+                        <rect key="frame" x="76" y="16" width="70.5" height="19"/>
+                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:42:21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjr-fz-qEg">
+                        <rect key="frame" x="279" y="16" width="48" height="14"/>
+                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                        <color key="textColor" name="grey2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O07-Ha-YWj">
+                        <rect key="frame" x="303" y="44" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="4WV-R5-gcg"/>
+                            <constraint firstAttribute="height" constant="24" id="VD7-xT-1U1"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="play"/>
+                        <connections>
+                            <action selector="playButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="nv5-1e-dwp"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mev-yt-hCR">
+                        <rect key="frame" x="76" y="43" width="44" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-8k-pjN">
+                                <rect key="frame" x="8" y="5" width="28" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" name="pink"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="transparentPink"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jbS-8k-pjN" secondAttribute="trailing" constant="8" id="C9z-1c-ffs"/>
+                            <constraint firstItem="jbS-8k-pjN" firstAttribute="top" secondItem="mev-yt-hCR" secondAttribute="top" constant="5" id="IOm-o5-B68"/>
+                            <constraint firstItem="jbS-8k-pjN" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="leading" constant="8" id="TLh-r5-bUW"/>
+                            <constraint firstAttribute="bottom" secondItem="jbS-8k-pjN" secondAttribute="bottom" constant="5" id="aLr-pO-wtp"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twP-GK-yb5">
+                        <rect key="frame" x="128" y="44" width="85.5" height="23"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rasion Project" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-Cb-AvM">
+                                <rect key="frame" x="8" y="5" width="69.5" height="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" name="purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="lightPurple"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WxE-Cb-AvM" secondAttribute="bottom" constant="5" id="FeK-35-wHX"/>
+                            <constraint firstAttribute="trailing" secondItem="WxE-Cb-AvM" secondAttribute="trailing" constant="8" id="Lia-Pl-4uz"/>
+                            <constraint firstItem="WxE-Cb-AvM" firstAttribute="leading" secondItem="twP-GK-yb5" secondAttribute="leading" constant="8" id="b9c-kd-Btg"/>
+                            <constraint firstItem="WxE-Cb-AvM" firstAttribute="top" secondItem="twP-GK-yb5" secondAttribute="top" constant="5" id="ud8-ju-k0A"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2cV-KX-ffj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="2ci-Vg-7V8"/>
+                <constraint firstItem="mev-yt-hCR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="43" id="2gq-WU-Bh8"/>
+                <constraint firstItem="Z2l-gy-fL7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="2u8-cs-0LQ"/>
+                <constraint firstItem="mev-yt-hCR" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="48n-FX-CaP"/>
+                <constraint firstItem="2cV-KX-ffj" firstAttribute="leading" secondItem="Z2l-gy-fL7" secondAttribute="trailing" constant="16" id="6vb-Ld-nYW"/>
+                <constraint firstItem="mev-yt-hCR" firstAttribute="top" secondItem="2cV-KX-ffj" secondAttribute="bottom" constant="8" id="77x-82-pnh"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="leading" secondItem="mev-yt-hCR" secondAttribute="trailing" constant="8" id="BDM-bU-uml"/>
+                <constraint firstItem="Z2l-gy-fL7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="EZJ-hL-Chk"/>
+                <constraint firstAttribute="trailing" secondItem="O07-Ha-YWj" secondAttribute="trailing" constant="16" id="FRI-vw-ca6"/>
+                <constraint firstItem="kjr-fz-qEg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="i2L-cW-RTd"/>
+                <constraint firstAttribute="trailing" secondItem="kjr-fz-qEg" secondAttribute="trailing" constant="16" id="kmM-y2-yyY"/>
+                <constraint firstItem="twP-GK-yb5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="44" id="lAn-RU-CZE"/>
+                <constraint firstAttribute="bottom" secondItem="O07-Ha-YWj" secondAttribute="bottom" constant="16" id="mdx-PE-TiV"/>
+                <constraint firstAttribute="bottom" secondItem="twP-GK-yb5" secondAttribute="bottom" constant="17" id="msx-vv-McR"/>
+            </constraints>
+            <size key="customSize" width="317" height="139"/>
+            <connections>
+                <outlet property="iconImageView" destination="Z2l-gy-fL7" id="pQE-xp-mlP"/>
+                <outlet property="mainCategoryLabel" destination="jbS-8k-pjN" id="AVi-PD-cht"/>
+                <outlet property="mainCategoryView" destination="mev-yt-hCR" id="JHn-XK-XMj"/>
+                <outlet property="playButton" destination="O07-Ha-YWj" id="tDu-hD-pf8"/>
+                <outlet property="subCategoryLabel" destination="WxE-Cb-AvM" id="xoG-Im-Yai"/>
+                <outlet property="subCategoryView" destination="twP-GK-yb5" id="PpM-jA-DLw"/>
+                <outlet property="timeLabel" destination="kjr-fz-qEg" id="yDP-Ng-Mah"/>
+                <outlet property="titleLabel" destination="2cV-KX-ffj" id="1M0-2W-k6T"/>
+            </connections>
+            <point key="canvasLocation" x="52.898550724637687" y="89.732142857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Icon Monitor Circle" width="44" height="44"/>
+        <image name="play" width="24" height="24"/>
+        <namedColor name="grey2">
+            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightPurple">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pink">
+            <color red="0.99215686274509807" green="0.35686274509803922" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.60799998044967651" green="0.31799998879432678" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="transparentPink">
+            <color red="1" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

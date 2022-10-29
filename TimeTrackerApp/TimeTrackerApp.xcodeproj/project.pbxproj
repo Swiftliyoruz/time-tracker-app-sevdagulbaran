@@ -1,0 +1,837 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		522CA72A2900A0000024A702 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 522CA7292900A0000024A702 /* SwipeCellKit */; };
+		5232201E29005CB20002AB32 /* DataManipulationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232201D29005CB20002AB32 /* DataManipulationTest.swift */; };
+		524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */; };
+		524081B928F76B0F00BE54B6 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */; };
+		524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081BA28F7717600BE54B6 /* MockHomeVievController.swift */; };
+		5249702728D118F90060BACB /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702628D118F90060BACB /* TaskViewController.swift */; };
+		5249702A28D119340060BACB /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249702928D119340060BACB /* ReportViewController.swift */; };
+		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
+		5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260023F28FB5687004828E1 /* MockDataManipulation.swift */; };
+		52656F8D28EB872C00D9F152 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52656F8C28EB872C00D9F152 /* DataManipulation.swift */; };
+		52660D1228FC7B5600A14636 /* AddViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52660D1128FC7B5600A14636 /* AddViewModelTest.swift */; };
+		52660D1428FC7B7100A14636 /* MockAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52660D1328FC7B7100A14636 /* MockAddViewController.swift */; };
+		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
+		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
+		527AFA3B28E75EC900C726CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AFA3A28E75EC900C726CB /* Constants.swift */; };
+		527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527EE62128E267310005D268 /* TaskModel.xcdatamodeld */; };
+		5281508728C7E28600E92B21 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */; };
+		5281508828C7E28600E92B21 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */; };
+		5281508928C7E28600E92B21 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281507F28C7E28500E92B21 /* Rubik-Light.ttf */; };
+		5281508A28C7E28600E92B21 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508028C7E28500E92B21 /* Rubik-Italic.ttf */; };
+		5281508B28C7E28600E92B21 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508128C7E28500E92B21 /* Rubik-Black.ttf */; };
+		5281508C28C7E28600E92B21 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508228C7E28500E92B21 /* Rubik-LightItalic.ttf */; };
+		5281508D28C7E28600E92B21 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508328C7E28500E92B21 /* Rubik-MediumItalic.ttf */; };
+		5281508E28C7E28600E92B21 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508428C7E28500E92B21 /* Rubik-Bold.ttf */; };
+		5281508F28C7E28600E92B21 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508528C7E28600E92B21 /* Rubik-Regular.ttf */; };
+		5281509028C7E28600E92B21 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5281508628C7E28600E92B21 /* Rubik-BoldItalic.ttf */; };
+		52A187B328E0E976006EDBC5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A187B228E0E976006EDBC5 /* AddViewController.swift */; };
+		52A187B528E0E988006EDBC5 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A187B428E0E988006EDBC5 /* AddViewModel.swift */; };
+		52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF0BE128C672C700C14DB3 /* AppDelegate.swift */; };
+		52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF0BE328C672C700C14DB3 /* SceneDelegate.swift */; };
+		52AF0BE628C672C700C14DB3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF0BE528C672C700C14DB3 /* HomeViewController.swift */; };
+		52AF0BE928C672C800C14DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AF0BE728C672C800C14DB3 /* Main.storyboard */; };
+		52AF0BEB28C672CD00C14DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AF0BEA28C672CD00C14DB3 /* Assets.xcassets */; };
+		52AF0BEE28C672CD00C14DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AF0BEC28C672CD00C14DB3 /* LaunchScreen.storyboard */; };
+		52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */; };
+		52B4169D28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */; };
+		52BF4C5328EDF909009107BD /* CustomToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BF4C5228EDF909009107BD /* CustomToastMessage.swift */; };
+		52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4828DF0847006879DF /* HomeViewModel.swift */; };
+		52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */; };
+		52D5CF4D28DF2D02006879DF /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */; };
+		52FC859028E8F81B0000F6CE /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */; };
+		52FC859128E8F81B0000F6CE /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		524081B028F76A8700BE54B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52AF0BD628C672C700C14DB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52AF0BDD28C672C700C14DB3;
+			remoteInfo = TimeTrackerApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5232201D29005CB20002AB32 /* DataManipulationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulationTest.swift; sourceTree = "<group>"; };
+		524081AC28F76A8700BE54B6 /* TimeTrackerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTrackerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerAppTests.swift; sourceTree = "<group>"; };
+		524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		524081BA28F7717600BE54B6 /* MockHomeVievController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeVievController.swift; sourceTree = "<group>"; };
+		5249702628D118F90060BACB /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		5249702928D119340060BACB /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
+		5260023F28FB5687004828E1 /* MockDataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManipulation.swift; sourceTree = "<group>"; };
+		52656F8C28EB872C00D9F152 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
+		52660D1128FC7B5600A14636 /* AddViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModelTest.swift; sourceTree = "<group>"; };
+		52660D1328FC7B7100A14636 /* MockAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddViewController.swift; sourceTree = "<group>"; };
+		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		527AFA3A28E75EC900C726CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		527EE62228E267310005D268 /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		5281507F28C7E28500E92B21 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		5281508028C7E28500E92B21 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		5281508128C7E28500E92B21 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		5281508228C7E28500E92B21 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		5281508328C7E28500E92B21 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5281508428C7E28500E92B21 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		5281508528C7E28600E92B21 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		5281508628C7E28600E92B21 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		52A187B228E0E976006EDBC5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		52A187B428E0E988006EDBC5 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		52AF0BDE28C672C700C14DB3 /* TimeTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AF0BE128C672C700C14DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52AF0BE328C672C700C14DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52AF0BE528C672C700C14DB3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52AF0BE828C672C800C14DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52AF0BEA28C672CD00C14DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52AF0BED28C672CD00C14DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52AF0BEF28C672CD00C14DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTaskCollectionViewCell.xib; sourceTree = "<group>"; };
+		52BF4C5228EDF909009107BD /* CustomToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastMessage.swift; sourceTree = "<group>"; };
+		52D5CF4828DF0847006879DF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		524081A928F76A8700BE54B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AF0BDB28C672C700C14DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522CA72A2900A0000024A702 /* SwipeCellKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5232201C29005C8C0002AB32 /* DataManipulation */ = {
+			isa = PBXGroup;
+			children = (
+				5232201D29005CB20002AB32 /* DataManipulationTest.swift */,
+			);
+			path = DataManipulation;
+			sourceTree = "<group>";
+		};
+		524081AD28F76A8700BE54B6 /* TimeTrackerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				524081B628F76ADE00BE54B6 /* Modules */,
+				524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */,
+			);
+			path = TimeTrackerAppTests;
+			sourceTree = "<group>";
+		};
+		524081B628F76ADE00BE54B6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5232201C29005C8C0002AB32 /* DataManipulation */,
+				52660D1028FC7B3200A14636 /* Add */,
+				524081B728F76AE600BE54B6 /* Home */,
+				5260023F28FB5687004828E1 /* MockDataManipulation.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		524081B728F76AE600BE54B6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */,
+				524081BA28F7717600BE54B6 /* MockHomeVievController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5249702428D118C40060BACB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52AF0BE528C672C700C14DB3 /* HomeViewController.swift */,
+				52D5CF4828DF0847006879DF /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5249702528D118DC0060BACB /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				5249702628D118F90060BACB /* TaskViewController.swift */,
+				52D5CF4C28DF2D02006879DF /* TaskViewModel.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		5249702828D119200060BACB /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				5249702928D119340060BACB /* ReportViewController.swift */,
+				52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		52660D1028FC7B3200A14636 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				52660D1128FC7B5600A14636 /* AddViewModelTest.swift */,
+				52660D1328FC7B7100A14636 /* MockAddViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		5270B64228D0FA3E008EA044 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				5270B64628D0FBA8008EA044 /* Constants */,
+				5270B64528D0FADA008EA044 /* Extensions */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		5270B64528D0FADA008EA044 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5270B64328D0FA6F008EA044 /* Color+Extension.swift */,
+				5270B64928D0FD56008EA044 /* Font+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5270B64628D0FBA8008EA044 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		527EE62428E268DE0005D268 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				52FC858E28E8F81B0000F6CE /* Task+CoreDataClass.swift */,
+				52FC858F28E8F81B0000F6CE /* Task+CoreDataProperties.swift */,
+				52656F8C28EB872C00D9F152 /* DataManipulation.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		5281507728C7E1AE00E92B21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5281507C28C7E21700E92B21 /* Fonts */,
+				52AF0BEA28C672CD00C14DB3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5281507828C7E1BC00E92B21 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				52AF0BE328C672C700C14DB3 /* SceneDelegate.swift */,
+				52AF0BE128C672C700C14DB3 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5281507928C7E1CA00E92B21 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				52AF0BEC28C672CD00C14DB3 /* LaunchScreen.storyboard */,
+				52AF0BE728C672C800C14DB3 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5281507A28C7E1D300E92B21 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52A187B128E0E954006EDBC5 /* Add */,
+				5249702828D119200060BACB /* Report */,
+				5249702528D118DC0060BACB /* Task */,
+				5249702428D118C40060BACB /* Home */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5281507B28C7E1FB00E92B21 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				52B4169B28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib */,
+				52B4169A28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift */,
+				525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		5281507C28C7E21700E92B21 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5281508128C7E28500E92B21 /* Rubik-Black.ttf */,
+				5281507D28C7E28500E92B21 /* Rubik-BlackItalic.ttf */,
+				5281508428C7E28500E92B21 /* Rubik-Bold.ttf */,
+				5281508628C7E28600E92B21 /* Rubik-BoldItalic.ttf */,
+				5281508028C7E28500E92B21 /* Rubik-Italic.ttf */,
+				5281507F28C7E28500E92B21 /* Rubik-Light.ttf */,
+				5281508228C7E28500E92B21 /* Rubik-LightItalic.ttf */,
+				5281507E28C7E28500E92B21 /* Rubik-Medium.ttf */,
+				5281508328C7E28500E92B21 /* Rubik-MediumItalic.ttf */,
+				5281508528C7E28600E92B21 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52A187B128E0E954006EDBC5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				52A187B228E0E976006EDBC5 /* AddViewController.swift */,
+				52A187B428E0E988006EDBC5 /* AddViewModel.swift */,
+				527AFA3A28E75EC900C726CB /* Constants.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		52AF0BD528C672C700C14DB3 = {
+			isa = PBXGroup;
+			children = (
+				52AF0BE028C672C700C14DB3 /* TimeTrackerApp */,
+				524081AD28F76A8700BE54B6 /* TimeTrackerAppTests */,
+				52AF0BDF28C672C700C14DB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52AF0BDF28C672C700C14DB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52AF0BDE28C672C700C14DB3 /* TimeTrackerApp.app */,
+				524081AC28F76A8700BE54B6 /* TimeTrackerAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52AF0BE028C672C700C14DB3 /* TimeTrackerApp */ = {
+			isa = PBXGroup;
+			children = (
+				52BF4C5128EDF8F9009107BD /* Components */,
+				5281507828C7E1BC00E92B21 /* Application */,
+				5281507B28C7E1FB00E92B21 /* CustomCell */,
+				527EE62428E268DE0005D268 /* DataManager */,
+				52AF0BEF28C672CD00C14DB3 /* Info.plist */,
+				5281507728C7E1AE00E92B21 /* Resources */,
+				527EE62128E267310005D268 /* TaskModel.xcdatamodeld */,
+				5281507928C7E1CA00E92B21 /* UI */,
+				5270B64228D0FA3E008EA044 /* Utilites */,
+				5281507A28C7E1D300E92B21 /* ViewController */,
+			);
+			path = TimeTrackerApp;
+			sourceTree = "<group>";
+		};
+		52BF4C5128EDF8F9009107BD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				52BF4C5228EDF909009107BD /* CustomToastMessage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		524081AB28F76A8700BE54B6 /* TimeTrackerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524081B428F76A8700BE54B6 /* Build configuration list for PBXNativeTarget "TimeTrackerAppTests" */;
+			buildPhases = (
+				524081A828F76A8700BE54B6 /* Sources */,
+				524081A928F76A8700BE54B6 /* Frameworks */,
+				524081AA28F76A8700BE54B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524081B128F76A8700BE54B6 /* PBXTargetDependency */,
+			);
+			name = TimeTrackerAppTests;
+			productName = TimeTrackerAppTests;
+			productReference = 524081AC28F76A8700BE54B6 /* TimeTrackerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52AF0BDD28C672C700C14DB3 /* TimeTrackerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52AF0BF228C672CD00C14DB3 /* Build configuration list for PBXNativeTarget "TimeTrackerApp" */;
+			buildPhases = (
+				52AF0BDA28C672C700C14DB3 /* Sources */,
+				52AF0BDB28C672C700C14DB3 /* Frameworks */,
+				52AF0BDC28C672C700C14DB3 /* Resources */,
+				52BF4C6328EE40DE009107BD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeTrackerApp;
+			packageProductDependencies = (
+				522CA7292900A0000024A702 /* SwipeCellKit */,
+			);
+			productName = TimeTrackerApp;
+			productReference = 52AF0BDE28C672C700C14DB3 /* TimeTrackerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52AF0BD628C672C700C14DB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					524081AB28F76A8700BE54B6 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 52AF0BDD28C672C700C14DB3;
+					};
+					52AF0BDD28C672C700C14DB3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 52AF0BD928C672C700C14DB3 /* Build configuration list for PBXProject "TimeTrackerApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52AF0BD528C672C700C14DB3;
+			packageReferences = (
+				522CA7282900A0000024A702 /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
+			);
+			productRefGroup = 52AF0BDF28C672C700C14DB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52AF0BDD28C672C700C14DB3 /* TimeTrackerApp */,
+				524081AB28F76A8700BE54B6 /* TimeTrackerAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		524081AA28F76A8700BE54B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AF0BDC28C672C700C14DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5281508728C7E28600E92B21 /* Rubik-BlackItalic.ttf in Resources */,
+				5281508E28C7E28600E92B21 /* Rubik-Bold.ttf in Resources */,
+				5281508C28C7E28600E92B21 /* Rubik-LightItalic.ttf in Resources */,
+				52B4169D28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.xib in Resources */,
+				52AF0BEE28C672CD00C14DB3 /* LaunchScreen.storyboard in Resources */,
+				5281509028C7E28600E92B21 /* Rubik-BoldItalic.ttf in Resources */,
+				5281508828C7E28600E92B21 /* Rubik-Medium.ttf in Resources */,
+				5281508A28C7E28600E92B21 /* Rubik-Italic.ttf in Resources */,
+				52AF0BEB28C672CD00C14DB3 /* Assets.xcassets in Resources */,
+				5281508B28C7E28600E92B21 /* Rubik-Black.ttf in Resources */,
+				5281508928C7E28600E92B21 /* Rubik-Light.ttf in Resources */,
+				5281508F28C7E28600E92B21 /* Rubik-Regular.ttf in Resources */,
+				5281508D28C7E28600E92B21 /* Rubik-MediumItalic.ttf in Resources */,
+				52AF0BE928C672C800C14DB3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52BF4C6328EE40DE009107BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		524081A828F76A8700BE54B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52660D1428FC7B7100A14636 /* MockAddViewController.swift in Sources */,
+				5232201E29005CB20002AB32 /* DataManipulationTest.swift in Sources */,
+				524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */,
+				524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */,
+				5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */,
+				524081B928F76B0F00BE54B6 /* HomeViewModelTests.swift in Sources */,
+				52660D1228FC7B5600A14636 /* AddViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AF0BDA28C672C700C14DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D5CF4D28DF2D02006879DF /* TaskViewModel.swift in Sources */,
+				52FC859028E8F81B0000F6CE /* Task+CoreDataClass.swift in Sources */,
+				52AF0BE628C672C700C14DB3 /* HomeViewController.swift in Sources */,
+				52A187B528E0E988006EDBC5 /* AddViewModel.swift in Sources */,
+				52FC859128E8F81B0000F6CE /* Task+CoreDataProperties.swift in Sources */,
+				52D5CF4928DF0847006879DF /* HomeViewModel.swift in Sources */,
+				5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */,
+				527EE62328E267310005D268 /* TaskModel.xcdatamodeld in Sources */,
+				5249702728D118F90060BACB /* TaskViewController.swift in Sources */,
+				527AFA3B28E75EC900C726CB /* Constants.swift in Sources */,
+				52D5CF4B28DF0FB3006879DF /* ReportViewModel.swift in Sources */,
+				52AF0BE228C672C700C14DB3 /* AppDelegate.swift in Sources */,
+				52BF4C5328EDF909009107BD /* CustomToastMessage.swift in Sources */,
+				52B4169C28C69C4F00BEFA3F /* CustomTaskCollectionViewCell.swift in Sources */,
+				5249702A28D119340060BACB /* ReportViewController.swift in Sources */,
+				52AF0BE428C672C700C14DB3 /* SceneDelegate.swift in Sources */,
+				525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */,
+				52656F8D28EB872C00D9F152 /* DataManipulation.swift in Sources */,
+				52A187B328E0E976006EDBC5 /* AddViewController.swift in Sources */,
+				5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		524081B128F76A8700BE54B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52AF0BDD28C672C700C14DB3 /* TimeTrackerApp */;
+			targetProxy = 524081B028F76A8700BE54B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52AF0BE728C672C800C14DB3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52AF0BE828C672C800C14DB3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52AF0BEC28C672CD00C14DB3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52AF0BED28C672CD00C14DB3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		524081B228F76A8700BE54B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFGA44DG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.TimeTrackerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeTrackerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TimeTrackerApp";
+			};
+			name = Debug;
+		};
+		524081B328F76A8700BE54B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFGA44DG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.TimeTrackerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeTrackerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TimeTrackerApp";
+			};
+			name = Release;
+		};
+		52AF0BF028C672CD00C14DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52AF0BF128C672CD00C14DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52AF0BF328C672CD00C14DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFGA44DG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeTrackerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.TimeTrackerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52AF0BF428C672CD00C14DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JFGA44DG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeTrackerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.TimeTrackerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		524081B428F76A8700BE54B6 /* Build configuration list for PBXNativeTarget "TimeTrackerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524081B228F76A8700BE54B6 /* Debug */,
+				524081B328F76A8700BE54B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52AF0BD928C672C700C14DB3 /* Build configuration list for PBXProject "TimeTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52AF0BF028C672CD00C14DB3 /* Debug */,
+				52AF0BF128C672CD00C14DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52AF0BF228C672CD00C14DB3 /* Build configuration list for PBXNativeTarget "TimeTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52AF0BF328C672CD00C14DB3 /* Debug */,
+				52AF0BF428C672CD00C14DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		522CA7282900A0000024A702 /* XCRemoteSwiftPackageReference "SwipeCellKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwipeCellKit/SwipeCellKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		522CA7292900A0000024A702 /* SwipeCellKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 522CA7282900A0000024A702 /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
+			productName = SwipeCellKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		527EE62128E267310005D268 /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				527EE62228E267310005D268 /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = 527EE62228E267310005D268 /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 52AF0BD628C672C700C14DB3 /* Project object */;
+}
