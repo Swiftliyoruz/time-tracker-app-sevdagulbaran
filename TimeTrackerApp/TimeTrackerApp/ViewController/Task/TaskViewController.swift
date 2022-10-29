@@ -40,7 +40,18 @@ extension TaskViewController {
     }
     
     @IBAction func quitButtonTapped(_ sender: Any) {
-        viewModel.quitButtonTapped()
+       
+        let alert = UIAlertController(title: "Quit Timer?", message: "Are you sure you would like to quit the Timer?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: { (_) in
+        }))
+        
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { [self] (_) in
+            viewModel.quitButtonTapped()
+            self.timeLabel.text = viewModel.makeTimeString(hours: 0, minutes: 0, seconds: 0)
+            timerStartUI()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -63,6 +74,7 @@ extension TaskViewController: TaskViewInterface {
     }
    
     func setupUI() {
+        finishButton.setTitleColor(UIColor.green, for: .normal)
         finishButton.layer.masksToBounds = true
         finishButton.layer.cornerRadius = 8
         quitButton.layer.masksToBounds = true

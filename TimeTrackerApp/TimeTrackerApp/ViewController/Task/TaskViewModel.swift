@@ -13,6 +13,7 @@ protocol TaskViewModelInterface {
     func viewDidLoad()
     func actionButtonTapped()
     func quitButtonTapped()
+    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String
 }
 
 final class TaskViewModel {
@@ -31,16 +32,6 @@ extension TaskViewModel {
         ((seconds / 3600), ((seconds % 3600) / 60), ((seconds % 3600) % 60))
     }
     
-    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String {
-        var timeString = ""
-        timeString += String(format: "%02d", hours)
-        timeString += " : "
-        timeString += String(format: "%02d", minutes)
-        timeString += " : "
-        timeString += String(format: "%02d", seconds)
-        return timeString
-    }
-    
     @objc func timerCounter() {
         counter += 1
         let time = secondsToHoursMinutesSeconds(seconds: counter)
@@ -50,6 +41,16 @@ extension TaskViewModel {
 }
 
 extension TaskViewModel: TaskViewModelInterface {
+
+    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String {
+        var timeString = ""
+        timeString += String(format: "%02d", hours)
+        timeString += " : "
+        timeString += String(format: "%02d", minutes)
+        timeString += " : "
+        timeString += String(format: "%02d", seconds)
+        return timeString
+    }
     
     func viewDidLoad() {
         view?.setupUI()
@@ -68,6 +69,7 @@ extension TaskViewModel: TaskViewModelInterface {
     }
     
     func quitButtonTapped() {
-        print("tapped")
+        counter = 0
+        timer.invalidate()
     }
 }
