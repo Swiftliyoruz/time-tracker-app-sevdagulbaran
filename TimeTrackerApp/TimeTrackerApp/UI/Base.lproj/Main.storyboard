@@ -203,7 +203,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="finishButtonTapped:" destination="QgA-IL-lrp" eventType="touchUpInside" id="flv-vW-0eG"/>
+                                    <action selector="actionButtonTapped:" destination="QgA-IL-lrp" eventType="touchUpInside" id="eSU-K4-hWv"/>
                                 </connections>
                             </button>
                         </subviews>

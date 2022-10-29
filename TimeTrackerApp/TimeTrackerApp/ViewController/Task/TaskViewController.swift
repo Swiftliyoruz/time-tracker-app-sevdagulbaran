@@ -9,9 +9,9 @@ import UIKit
 
 protocol TaskViewInterface: AnyObject {
     func setupUI()
-    func timerCounter()
     func timerStartUI()
     func timerFinishUI()
+    func timePass(timeString: String)
 }
 
 final class TaskViewController: UIViewController {
@@ -24,10 +24,6 @@ final class TaskViewController: UIViewController {
     
     private lazy var viewModel: TaskViewModelInterface = TaskViewModel()
     
-    var timer: Timer = Timer()
-    var count: Int = 0
-    var timerCounting: Bool = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.view = self
@@ -39,8 +35,8 @@ final class TaskViewController: UIViewController {
 
 extension TaskViewController {
     
-    @IBAction func finishButtonTapped(_ sender: Any) {
-        viewModel.finishButtonTapped()
+    @IBAction func actionButtonTapped(_ sender: Any) {
+        viewModel.actionButtonTapped()
     }
     
     @IBAction func quitButtonTapped(_ sender: Any) {
@@ -48,16 +44,14 @@ extension TaskViewController {
     }
 }
 
-// MARK: - TaskViewModelDelegate
+// MARK: - TaskViewInterface
 
 extension TaskViewController: TaskViewInterface {
- 
-    @objc func timerCounter() {
-        count += 1
-        let time = viewModel.secondsToHoursMinutesSeconds(seconds: count)
-        let timeString = viewModel.makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
+    
+    func timePass(timeString: String) {
         timeLabel.text = timeString
     }
+    
     func timerStartUI() {
         finishButton.setTitle("START", for: .normal)
         finishButton.setTitleColor(UIColor.green, for: .normal)
@@ -67,7 +61,7 @@ extension TaskViewController: TaskViewInterface {
         finishButton.setTitle("STOP", for: .normal)
         finishButton.setTitleColor(UIColor.red, for: .normal)
     }
-
+   
     func setupUI() {
         finishButton.layer.masksToBounds = true
         finishButton.layer.cornerRadius = 8
