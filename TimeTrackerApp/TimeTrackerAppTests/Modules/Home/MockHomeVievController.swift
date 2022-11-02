@@ -8,7 +8,7 @@
 @testable import TimeTrackerApp
 
 final class MockHomeVievController: HomeViewInterface {
-
+    
     var invokedTabbarConfig =  false
     var invokedTabbarConfigCount = 0
     
@@ -38,5 +38,13 @@ final class MockHomeVievController: HomeViewInterface {
     func reloadData() {
         invokedReloadData =  true
         invokedReloadDataCount += 1
+    }
+    
+    var invokedMoreButtonTapped =  false
+    var invokedMoreButtonTappedCount = 0
+    
+    func moreButtonTapped() {
+        invokedMoreButtonTapped = true
+        invokedMoreButtonTappedCount = 1
     }
 }

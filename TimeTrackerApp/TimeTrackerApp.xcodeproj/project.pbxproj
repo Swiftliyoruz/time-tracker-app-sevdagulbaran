@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		522CA72A2900A0000024A702 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = 522CA7292900A0000024A702 /* SwipeCellKit */; };
-		5232201E29005CB20002AB32 /* DataManipulationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232201D29005CB20002AB32 /* DataManipulationTest.swift */; };
 		524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */; };
 		524081B928F76B0F00BE54B6 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */; };
 		524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524081BA28F7717600BE54B6 /* MockHomeVievController.swift */; };
@@ -17,8 +16,6 @@
 		525FE5E428DF311E00D18933 /* CustomTaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */; };
 		5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260023F28FB5687004828E1 /* MockDataManipulation.swift */; };
 		52656F8D28EB872C00D9F152 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52656F8C28EB872C00D9F152 /* DataManipulation.swift */; };
-		52660D1228FC7B5600A14636 /* AddViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52660D1128FC7B5600A14636 /* AddViewModelTest.swift */; };
-		52660D1428FC7B7100A14636 /* MockAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52660D1328FC7B7100A14636 /* MockAddViewController.swift */; };
 		5270B64428D0FA6F008EA044 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64328D0FA6F008EA044 /* Color+Extension.swift */; };
 		5270B64A28D0FD56008EA044 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270B64928D0FD56008EA044 /* Font+Extension.swift */; };
 		527AFA3B28E75EC900C726CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AFA3A28E75EC900C726CB /* Constants.swift */; };
@@ -62,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5232201D29005CB20002AB32 /* DataManipulationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulationTest.swift; sourceTree = "<group>"; };
 		524081AC28F76A8700BE54B6 /* TimeTrackerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTrackerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		524081AE28F76A8700BE54B6 /* TimeTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerAppTests.swift; sourceTree = "<group>"; };
 		524081B828F76B0F00BE54B6 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -72,8 +68,6 @@
 		525FE5E328DF311E00D18933 /* CustomTaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTaskCellViewModel.swift; sourceTree = "<group>"; };
 		5260023F28FB5687004828E1 /* MockDataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManipulation.swift; sourceTree = "<group>"; };
 		52656F8C28EB872C00D9F152 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
-		52660D1128FC7B5600A14636 /* AddViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModelTest.swift; sourceTree = "<group>"; };
-		52660D1328FC7B7100A14636 /* MockAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddViewController.swift; sourceTree = "<group>"; };
 		5270B64328D0FA6F008EA044 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5270B64928D0FD56008EA044 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		527AFA3A28E75EC900C726CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -127,14 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5232201C29005C8C0002AB32 /* DataManipulation */ = {
-			isa = PBXGroup;
-			children = (
-				5232201D29005CB20002AB32 /* DataManipulationTest.swift */,
-			);
-			path = DataManipulation;
-			sourceTree = "<group>";
-		};
 		524081AD28F76A8700BE54B6 /* TimeTrackerAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +133,6 @@
 		524081B628F76ADE00BE54B6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5232201C29005C8C0002AB32 /* DataManipulation */,
-				52660D1028FC7B3200A14636 /* Add */,
 				524081B728F76AE600BE54B6 /* Home */,
 				5260023F28FB5687004828E1 /* MockDataManipulation.swift */,
 			);
@@ -189,15 +173,6 @@
 				52D5CF4A28DF0FB3006879DF /* ReportViewModel.swift */,
 			);
 			path = Report;
-			sourceTree = "<group>";
-		};
-		52660D1028FC7B3200A14636 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				52660D1128FC7B5600A14636 /* AddViewModelTest.swift */,
-				52660D1328FC7B7100A14636 /* MockAddViewController.swift */,
-			);
-			path = Add;
 			sourceTree = "<group>";
 		};
 		5270B64228D0FA3E008EA044 /* Utilites */ = {
@@ -492,13 +467,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52660D1428FC7B7100A14636 /* MockAddViewController.swift in Sources */,
-				5232201E29005CB20002AB32 /* DataManipulationTest.swift in Sources */,
 				524081BB28F7717600BE54B6 /* MockHomeVievController.swift in Sources */,
 				524081AF28F76A8700BE54B6 /* TimeTrackerAppTests.swift in Sources */,
 				5260024028FB5687004828E1 /* MockDataManipulation.swift in Sources */,
 				524081B928F76B0F00BE54B6 /* HomeViewModelTests.swift in Sources */,
-				52660D1228FC7B5600A14636 /* AddViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

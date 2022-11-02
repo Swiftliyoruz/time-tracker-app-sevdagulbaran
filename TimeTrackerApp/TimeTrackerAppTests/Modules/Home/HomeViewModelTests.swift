@@ -32,12 +32,14 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertFalse(view.invokedSetupUI)
         XCTAssertFalse(view.invokedRegisterCollectionView)
         XCTAssertFalse(view.invokedTabbarConfig)
+        XCTAssertFalse(view.invokedMoreButtonTapped)
         
         viewModel.viewDidLoad()
 
         XCTAssertEqual(view.invokedSetupUICount, 1)
         XCTAssertEqual(view.invokedRegisterCollectionViewCount, 1)
         XCTAssertEqual(view.invokedTabbarConfigCount, 1)
+        XCTAssertEqual(view.invokedMoreButtonTappedCount, 1)
        
     }
     
